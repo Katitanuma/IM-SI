@@ -35,6 +35,7 @@ Partial Class FrmMenuPrincipal
         Me.BarButtonItem37 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem38 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem39 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem44 = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PagVentas = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
@@ -106,7 +107,6 @@ Partial Class FrmMenuPrincipal
         Me.pcFondo = New DevExpress.XtraEditors.PanelControl()
         Me.LblIdUsuario = New System.Windows.Forms.Label()
         Me.TxtIdVenta = New System.Windows.Forms.Label()
-        Me.BarButtonItem44 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApplicationMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -222,6 +222,14 @@ Partial Class FrmMenuPrincipal
         Me.BarButtonItem39.Caption = "BarButtonItem39"
         Me.BarButtonItem39.Id = 1
         Me.BarButtonItem39.Name = "BarButtonItem39"
+        '
+        'BarButtonItem44
+        '
+        Me.BarButtonItem44.Caption = "Pedidos"
+        Me.BarButtonItem44.Glyph = CType(resources.GetObject("BarButtonItem44.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem44.Id = 7
+        Me.BarButtonItem44.LargeGlyph = CType(resources.GetObject("BarButtonItem44.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem44.Name = "BarButtonItem44"
         '
         'RibbonPage1
         '
@@ -404,8 +412,8 @@ Partial Class FrmMenuPrincipal
         'PagComprasPedidos
         '
         Me.PagComprasPedidos.AllowTextClipping = False
-        Me.PagComprasPedidos.ItemLinks.Add(Me.BarButtonItem17)
         Me.PagComprasPedidos.ItemLinks.Add(Me.BarButtonItem44)
+        Me.PagComprasPedidos.ItemLinks.Add(Me.BarButtonItem17)
         Me.PagComprasPedidos.Name = "PagComprasPedidos"
         Me.PagComprasPedidos.Text = "Acciones"
         '
@@ -719,14 +727,6 @@ Partial Class FrmMenuPrincipal
         Me.TxtIdVenta.TabIndex = 26
         Me.TxtIdVenta.Text = "Label1"
         Me.TxtIdVenta.Visible = False
-        '
-        'BarButtonItem44
-        '
-        Me.BarButtonItem44.Caption = "Pedidos"
-        Me.BarButtonItem44.Glyph = CType(resources.GetObject("BarButtonItem44.Glyph"), System.Drawing.Image)
-        Me.BarButtonItem44.Id = 7
-        Me.BarButtonItem44.LargeGlyph = CType(resources.GetObject("BarButtonItem44.LargeGlyph"), System.Drawing.Image)
-        Me.BarButtonItem44.Name = "BarButtonItem44"
         '
         'FrmMenuPrincipal
         '
