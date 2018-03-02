@@ -212,7 +212,7 @@ Public Class FrmDepartamento
     Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusquedaCliente.Click
         With FrmPais
             FrmPais.var = 1
-            .MdiParent = MenuPrincipal
+            .MdiParent = FrmMenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
         End With
@@ -221,7 +221,7 @@ Public Class FrmDepartamento
     Private Sub GCPrincipal_DoubleClick(sender As Object, e As EventArgs) Handles GCPrincipal.DoubleClick
         If var = 1 Then
             FrmMunicipio.LlenarComboboxDepartamento()
-            FrmMunicipio.CboDepartamento.Text = DgvDepartamento.GetRowCellValue(DgvDepartamento.FocusedRowHandle, ColDepartamento)
+            FrmMunicipio.CboDepartamento.EditValue = DgvDepartamento.GetRowCellValue(DgvDepartamento.FocusedRowHandle, ColIdDepartamento)
             Me.Close()
         End If
     End Sub

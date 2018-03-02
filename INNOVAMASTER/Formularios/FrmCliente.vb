@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 Imports DevExpress.XtraEditors
 
-Public Class FrmCliente
+Public Class BtnBuesquedaEC
     Dim dt As New DataTable
     Dim Conec As New Conexion
     Dim cmd As SqlCommand
@@ -362,7 +362,7 @@ Public Class FrmCliente
         Mostrar()
     End Sub
 
-    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
+    Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles BtnBusquedaMunicipio.Click
         Exportar_a_PDF(GCPrincipal, Me.Text)
     End Sub
 
@@ -374,4 +374,16 @@ Public Class FrmCliente
         PrintableComponentLink1.CreateDocument()
         PrintableComponentLink1.ShowPreview()
     End Sub
+
+    Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
+        With FrmMunicipio
+            FrmMunicipio.var = 1
+            .MdiParent = FrmMenuPrincipal
+            .Dock = DockStyle.Fill
+            .Show()
+
+        End With
+    End Sub
+
+
 End Class

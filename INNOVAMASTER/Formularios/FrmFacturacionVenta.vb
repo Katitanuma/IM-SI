@@ -956,11 +956,11 @@ Public Class FrmFacturacionVenta
     End Sub
 
     Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusqueda.Click
-        FrmCliente.LblRelacionClienteVenta.Text = "2"
-        FrmCliente.MdiParent = FrmMenuPrincipal
-        FrmCliente.Dock = DockStyle.Fill
-        FrmCliente.Show()
-        FrmCliente.Focus()
+        BtnBuesquedaEC.LblRelacionClienteVenta.Text = "2"
+        BtnBuesquedaEC.MdiParent = FrmMenuPrincipal
+        BtnBuesquedaEC.Dock = DockStyle.Fill
+        BtnBuesquedaEC.Show()
+        BtnBuesquedaEC.Focus()
     End Sub
 
     Private Function GuardarVenta() As Boolean

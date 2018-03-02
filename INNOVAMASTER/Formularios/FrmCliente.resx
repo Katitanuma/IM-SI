@@ -1188,7 +1188,7 @@
   <data name="&gt;&gt;SimpleButton5.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="SimpleButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnBusquedaMunicipio.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAB10RVh0VGl0
         bGUARXhwb3J0O1BkZjtFeHBvcnRUb1BkZjvuOQd0AAAIpUlEQVRYR8WWeVhU1xnGzWK3PMYYNW6NMaaN
@@ -1231,28 +1231,28 @@
         XyR6hvQG6c1eGt9Lbz0h/p6z2/dt+P8RBvwMT0XRw/WcICcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="SimpleButton4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BtnBusquedaMunicipio.Location" type="System.Drawing.Point, System.Drawing">
     <value>828, 472</value>
   </data>
-  <data name="SimpleButton4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BtnBusquedaMunicipio.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 45</value>
   </data>
-  <data name="SimpleButton4.TabIndex" type="System.Int32, mscorlib">
+  <data name="BtnBusquedaMunicipio.TabIndex" type="System.Int32, mscorlib">
     <value>133</value>
   </data>
-  <data name="SimpleButton4.Text" xml:space="preserve">
+  <data name="BtnBusquedaMunicipio.Text" xml:space="preserve">
     <value>Exportar PDF</value>
   </data>
-  <data name="&gt;&gt;SimpleButton4.Name" xml:space="preserve">
-    <value>SimpleButton4</value>
+  <data name="&gt;&gt;BtnBusquedaMunicipio.Name" xml:space="preserve">
+    <value>BtnBusquedaMunicipio</value>
   </data>
-  <data name="&gt;&gt;SimpleButton4.Type" xml:space="preserve">
+  <data name="&gt;&gt;BtnBusquedaMunicipio.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;SimpleButton4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BtnBusquedaMunicipio.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SimpleButton4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BtnBusquedaMunicipio.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="SimpleButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -5055,7 +5055,7 @@ e7dac44018a8a27d86ec9a6bb4304f246e76fc7cc0669c8a145707e39ed54a486972068875bd0dfd
     <value>DevExpress.XtraPrinting.PrintableComponentLink, DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FrmCliente</value>
+    <value>BtnBuesquedaEC</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>

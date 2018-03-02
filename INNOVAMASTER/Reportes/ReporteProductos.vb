@@ -40,6 +40,7 @@ Public Class ReporteProductos
         Dim frm As New FrmRptProducto
         frm.MdiParent = FrmMenuPrincipal
         frm.Show()
+
     End Sub
 
     Protected Overrides Sub Imprimir()

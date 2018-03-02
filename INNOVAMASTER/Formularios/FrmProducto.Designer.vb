@@ -85,6 +85,8 @@ Partial Class FrmProducto
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
         Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
+        Me.BtnBusquedaCategoria = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnBusquedaModelo = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -459,6 +461,8 @@ Partial Class FrmProducto
         '
         'GbProducto
         '
+        Me.GbProducto.Controls.Add(Me.BtnBusquedaModelo)
+        Me.GbProducto.Controls.Add(Me.BtnBusquedaCategoria)
         Me.GbProducto.Controls.Add(Me.BtnCodigoProveedor)
         Me.GbProducto.Controls.Add(Me.ChkGravado)
         Me.GbProducto.Controls.Add(Me.TxtPrecioMayorista)
@@ -850,6 +854,22 @@ Partial Class FrmProducto
         Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
         Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
         '
+        'BtnBusquedaCategoria
+        '
+        Me.BtnBusquedaCategoria.Location = New System.Drawing.Point(380, 281)
+        Me.BtnBusquedaCategoria.Name = "BtnBusquedaCategoria"
+        Me.BtnBusquedaCategoria.Size = New System.Drawing.Size(29, 23)
+        Me.BtnBusquedaCategoria.TabIndex = 187
+        Me.BtnBusquedaCategoria.Text = "..."
+        '
+        'BtnBusquedaModelo
+        '
+        Me.BtnBusquedaModelo.Location = New System.Drawing.Point(380, 319)
+        Me.BtnBusquedaModelo.Name = "BtnBusquedaModelo"
+        Me.BtnBusquedaModelo.Size = New System.Drawing.Size(29, 23)
+        Me.BtnBusquedaModelo.TabIndex = 188
+        Me.BtnBusquedaModelo.Text = "..."
+        '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -964,4 +984,6 @@ Partial Class FrmProducto
     Friend WithEvents Label1 As Label
     Friend WithEvents PrintingSystem1 As DevExpress.XtraPrinting.PrintingSystem
     Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
+    Friend WithEvents BtnBusquedaCategoria As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnBusquedaModelo As DevExpress.XtraEditors.SimpleButton
 End Class

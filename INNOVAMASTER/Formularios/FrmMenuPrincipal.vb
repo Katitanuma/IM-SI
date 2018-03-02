@@ -85,10 +85,10 @@ Public Class FrmMenuPrincipal
     End Sub
 
     Private Sub BarButtonItem4_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem4.ItemClick
-        FrmCliente.MdiParent = Me
-        FrmCliente.Focus()
-        FrmCliente.Show()
-        FrmCliente.Focus()
+        BtnBuesquedaEC.MdiParent = Me
+        BtnBuesquedaEC.Focus()
+        BtnBuesquedaEC.Show()
+        BtnBuesquedaEC.Focus()
     End Sub
 
     Private Sub BarButtonItem5_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem5.ItemClick

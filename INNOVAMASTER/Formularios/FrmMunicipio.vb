@@ -117,8 +117,8 @@ Public Class FrmMunicipio
 
     Private Sub GCPrincipal_DoubleClick(sender As Object, e As EventArgs) Handles GCPrincipal.DoubleClick
         If var = 1 Then
-            FrmCliente.LlenarComboMunicipio()
-            FrmCliente.CboMunicipio.Text = DgvMunicipio.GetRowCellValue(DgvMunicipio.FocusedRowHandle, ColMunicipio)
+            BtnBuesquedaEC.LlenarComboMunicipio()
+            BtnBuesquedaEC.CboMunicipio.Text = DgvMunicipio.GetRowCellValue(DgvMunicipio.FocusedRowHandle, ColMunicipio)
             Me.Close()
         ElseIf var = 2 Then
             FrmEmpleado.LlenarComboMunicipio()

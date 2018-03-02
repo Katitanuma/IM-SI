@@ -39,10 +39,10 @@ Partial Public Class MenuPrincipal
     End Sub
     Private Sub BarButtonItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnRegistroClientes.ItemClick
         Tema = DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName
-        FrmCliente.MdiParent = Me
-        FrmCliente.Focus()
-        FrmCliente.Show()
-        FrmCliente.Focus()
+        BtnBuesquedaEC.MdiParent = Me
+        BtnBuesquedaEC.Focus()
+        BtnBuesquedaEC.Show()
+        BtnBuesquedaEC.Focus()
     End Sub
     Private Sub BarButtonItem3_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnRegistroEmpleado.ItemClick
         Tema = DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName

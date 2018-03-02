@@ -215,22 +215,20 @@ Public Class FrmModelo
 
     End Sub
 
-
-
-
-    Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusquedaCliente.Click
+    Private Sub BtnBusquedaMarca_Click(sender As Object, e As EventArgs) Handles BtnBusquedaMarca.Click
         With FrmMarca
             FrmMarca.var = 1
-            .MdiParent = MenuPrincipal
+            .MdiParent = FrmMenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
+
         End With
     End Sub
 
     Private Sub GCPrincipal_DoubleClick(sender As Object, e As EventArgs) Handles GCPrincipal.DoubleClick
         If var = 1 Then
-            FrmProducto.LlenarCombos()
-            FrmProducto.CboModelo.Text = DgvModelo.GetRowCellValue(DgvModelo.FocusedRowHandle, ColModelo)
+            FrmProducto.LlenarCombos2()
+            FrmProducto.CboModelo.EditValue = DgvModelo.GetRowCellValue(DgvModelo.FocusedRowHandle, ColIdModelo)
             Me.Close()
         End If
     End Sub

@@ -94,9 +94,4 @@ Public Class ReporteClientes
         Exportar_a_PDF(GCPrincipal, Me.Text)
     End Sub
 
-    Private Sub BtnReporte_Click(sender As Object, e As EventArgs) Handles BtnReporte.Click
-
-    End Sub
-
-
 End Class

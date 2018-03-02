@@ -493,4 +493,22 @@ Public Class FrmProducto
             TxtGravado.Value = 0
         End If
     End Sub
+
+    Private Sub BtnBusquedaCategoria_Click(sender As Object, e As EventArgs) Handles BtnBusquedaCategoria.Click
+        With FrmCategoria
+            FrmCategoria.var = 1
+            .MdiParent = FrmMenuPrincipal
+            .Dock = DockStyle.Fill
+            .Show()
+        End With
+    End Sub
+
+    Private Sub BtnBusquedaModelo_Click(sender As Object, e As EventArgs) Handles BtnBusquedaModelo.Click
+        With FrmModelo
+            FrmModelo.var = 1
+            .MdiParent = FrmMenuPrincipal
+            .Dock = DockStyle.Fill
+            .Show()
+        End With
+    End Sub
 End Class

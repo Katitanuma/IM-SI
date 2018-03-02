@@ -46,7 +46,7 @@ Partial Class FrmModelo
         Me.BtnActualizar = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.GbModelo = New DevExpress.XtraEditors.GroupControl()
-        Me.BtnBusquedaCliente = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnBusquedaMarca = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
@@ -306,7 +306,7 @@ Partial Class FrmModelo
         '
         'GbModelo
         '
-        Me.GbModelo.Controls.Add(Me.BtnBusquedaCliente)
+        Me.GbModelo.Controls.Add(Me.BtnBusquedaMarca)
         Me.GbModelo.Controls.Add(Me.TxtModelo)
         Me.GbModelo.Controls.Add(Me.LabelControl4)
         Me.GbModelo.Controls.Add(Me.CboMarca)
@@ -319,13 +319,13 @@ Partial Class FrmModelo
         Me.GbModelo.TabIndex = 130
         Me.GbModelo.Text = "Datos Modelo"
         '
-        'BtnBusquedaCliente
+        'BtnBusquedaMarca
         '
-        Me.BtnBusquedaCliente.Location = New System.Drawing.Point(332, 116)
-        Me.BtnBusquedaCliente.Name = "BtnBusquedaCliente"
-        Me.BtnBusquedaCliente.Size = New System.Drawing.Size(33, 23)
-        Me.BtnBusquedaCliente.TabIndex = 130
-        Me.BtnBusquedaCliente.Text = "..."
+        Me.BtnBusquedaMarca.Location = New System.Drawing.Point(332, 116)
+        Me.BtnBusquedaMarca.Name = "BtnBusquedaMarca"
+        Me.BtnBusquedaMarca.Size = New System.Drawing.Size(33, 23)
+        Me.BtnBusquedaMarca.TabIndex = 130
+        Me.BtnBusquedaMarca.Text = "..."
         '
         'SimpleButton2
         '
@@ -436,7 +436,7 @@ Partial Class FrmModelo
     Friend WithEvents TxtIdModelo As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents GbModelo As DevExpress.XtraEditors.GroupControl
-    Friend WithEvents BtnBusquedaCliente As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnBusquedaMarca As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton5 As DevExpress.XtraEditors.SimpleButton

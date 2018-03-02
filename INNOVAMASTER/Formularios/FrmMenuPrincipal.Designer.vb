@@ -118,7 +118,7 @@ Partial Class FrmMenuPrincipal
         Me.RibbonControl.ApplicationButtonDropDownControl = Me.ApplicationMenu1
         Me.RibbonControl.ApplicationIcon = Global.INNOVAMASTER.My.Resources.Resources.Logo_BUeno
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem11})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.MaxItemId = 8
         Me.RibbonControl.Name = "RibbonControl"
@@ -267,10 +267,10 @@ Partial Class FrmMenuPrincipal
         '
         'PagProductos
         '
-        Me.PagProductos.ItemLinks.Add(Me.BarButtonItem11)
         Me.PagProductos.ItemLinks.Add(Me.BarButtonItem12)
         Me.PagProductos.ItemLinks.Add(Me.BarButtonItem13)
         Me.PagProductos.ItemLinks.Add(Me.BarButtonItem14)
+        Me.PagProductos.ItemLinks.Add(Me.BarButtonItem11)
         Me.PagProductos.ItemLinks.Add(Me.BarButtonItem16)
         Me.PagProductos.Name = "PagProductos"
         Me.PagProductos.Text = "Acciones"
