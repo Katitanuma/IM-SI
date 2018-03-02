@@ -39,7 +39,7 @@ Public Class ReporteClientes
         'FrmRptCliente.Show()
 
         Dim frm As New FrmRptCliente
-        frm.MdiParent = Me
+        frm.MdiParent = FrmMenuPrincipal
         frm.Show()
 
     End Sub

@@ -34,7 +34,7 @@ Public Class FrmFacturacionVenta
                                 Dim ex As Integer
                                 ex = CInt(dr.GetValue(5)) - 5
                                 If ex = 0 Then
-                                    MsgBox("No hay existencia de ese producto", MsgBoxStyle.Critical)
+                                    XtraMessageBox.Show("No hay existencia de ese producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                     DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
                                     LlenarTextBox()
                                 Else
@@ -62,7 +62,7 @@ Public Class FrmFacturacionVenta
 
                                 End If
                             Else
-                                MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
+                                XtraMessageBox.Show("El estado del producto está inactivo", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                 DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
                                 LlenarTextBox()
 
@@ -70,7 +70,7 @@ Public Class FrmFacturacionVenta
 
                         Else
                             DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
-                            MsgBox("Producto no registrado", MsgBoxStyle.Information)
+                            XtraMessageBox.Show("Producto no registrado", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                             DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
                         End If
                         dr.Close()
@@ -94,7 +94,7 @@ Public Class FrmFacturacionVenta
 
                 End Try
             Else
-                MsgBox("Seleccione la Forma de Venta", MsgBoxStyle.Information, "INNOVAMASTER")
+                XtraMessageBox.Show("Seleccione la Forma de Venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Dim a, b As Integer
                 a = DgvDetalle.Rows.Count
                 b = e.RowIndex + 1
@@ -135,7 +135,7 @@ Public Class FrmFacturacionVenta
                                 Dim ex As Integer
                                 ex = CInt(dr.GetValue(5)) - 5
                                 If ex = 0 Then
-                                    MsgBox("No hay existencia de ese producto", MsgBoxStyle.Critical)
+                                    XtraMessageBox.Show("No hay existencia de ese producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                                     DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
                                     LlenarTextBox()
                                 Else
@@ -163,7 +163,7 @@ Public Class FrmFacturacionVenta
 
                                 End If
                             Else
-                                MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
+                                XtraMessageBox.Show("El estado del producto está inactivo", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                                 DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
                                 LlenarTextBox()
 
@@ -173,7 +173,7 @@ Public Class FrmFacturacionVenta
 
                             DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
                             DgvDetalle.Rows(e.RowIndex).Cells(2).Value = Nothing
-                            MsgBox("Producto no registrado", MsgBoxStyle.Information)
+                            XtraMessageBox.Show("Producto no registrado", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                             DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = "Producto No Registrado"
                             DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
                         End If
@@ -206,7 +206,7 @@ Public Class FrmFacturacionVenta
 
 
 
-                MsgBox("Seleccione la Forma de Venta", MsgBoxStyle.Information, "INNOVAMASTER")
+                XtraMessageBox.Show("Seleccione la Forma de Venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Dim a, b As Integer
                 a = DgvDetalle.Rows.Count
                 b = e.RowIndex + 1
@@ -249,12 +249,12 @@ Public Class FrmFacturacionVenta
                     existencia = CInt(dr.GetValue(0)) - 5
                     existencia2 = CInt(dr.GetValue(0)) - 10
                     If (DgvDetalle.Rows(e.RowIndex).Cells(3).Value - CDbl(LblCant.Text)) > existencia Then
-                        MsgBox("Se sobrepasa de la existencia estimada. Existencia= " + Str(existencia + CDbl(LblCant.Text)), MsgBoxStyle.Critical)
+                        XtraMessageBox.Show("Se sobrepasa de la existencia estimada. Existencia= " + Str(existencia + CDbl(LblCant.Text)), "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         DgvDetalle.Rows(e.RowIndex).Cells(3).Value = existencia + CDbl(LblCant.Text)
 
                     ElseIf DgvDetalle.Rows(e.RowIndex).Cells(3).Value > existencia2 Then
 
-                        MsgBox("Advertencia. Hay poca existencia", MsgBoxStyle.Information)
+                        XtraMessageBox.Show("Advertencia. Hay poca existencia", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         DgvDetalle.Rows(e.RowIndex).Cells(3).Value = DgvDetalle.Rows(e.RowIndex).Cells(3).Value
                     Else
                         DgvDetalle.Rows(e.RowIndex).Cells(3).Value = DgvDetalle.Rows(e.RowIndex).Cells(3).Value
@@ -532,7 +532,7 @@ Public Class FrmFacturacionVenta
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
         If x = 1 Then
             If DgvDetalle.RowCount = 1 Then
-                MsgBox("Ingresar al menos un producto para facturar la venta", MsgBoxStyle.Information, "INNOVAMASTER")
+                XtraMessageBox.Show("Ingresar al menos un producto para facturar la venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Else
 
@@ -541,23 +541,23 @@ Public Class FrmFacturacionVenta
                 Dim monto As Double
                 If re = vbNullString Then
 
-                    MsgBox("Campo no Valido", MsgBoxStyle.Critical, "INNOVAMASTER")
+                    XtraMessageBox.Show("Campo no Valido", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Exit Sub
                 ElseIf IsNumeric(re) Then
                     monto = CDbl(re)
                 Else
 
-                    MsgBox("Campo no Valido", MsgBoxStyle.Critical, "INNOVAMASTER")
+                    XtraMessageBox.Show("Campo no Valido", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Exit Sub
                 End If
                 If monto < CDbl(TxtTotal.Text) Then
 
-                    MsgBox("El Monto de Pago es muy bajo para Facturar", MsgBoxStyle.Critical, "INNOVAMASTER")
+                    XtraMessageBox.Show("El Monto de Pago es muy bajo para Facturar", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Exit Sub
                 Else
                     LblCambio.Text = monto - CDbl(TxtTotal.Text)
                 End If
-                MessageBox.Show("Cambio: L." + LblCambio.Text)
+                XtraMessageBox.Show("Cambio: L." + LblCambio.Text)
                 Conec.Conectarse()
                 Dim estado As Boolean = True
                 DgvDetalle.AllowUserToAddRows = False
@@ -604,8 +604,8 @@ Public Class FrmFacturacionVenta
                     End Try
                     Label7.Text = "1"
 
-                    MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
-                    Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    XtraMessageBox.Show("Productos facturados con éxito, Vamos a Imprimir la Factura", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Dim r As DialogResult = XtraMessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If r = DialogResult.Yes Then
                         FrmFactura.var = 1
                         EditarCambio(CDbl(LblCambio.Text))
@@ -637,14 +637,9 @@ Public Class FrmFacturacionVenta
                 Else
 
                     DgvDetalle.AllowUserToAddRows = True
-                    MsgBox("Tiene que Ingresar algunos Códigos de Producto", MsgBoxStyle.Critical, "INNOVAMASTER")
+                    XtraMessageBox.Show("Tiene que Ingresar algunos Códigos de Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
                 End If
-
-
-
-
-
             End If
             Exit Sub
         End If
@@ -652,7 +647,7 @@ Public Class FrmFacturacionVenta
             x = 1
 
             If DgvDetalle.RowCount = 1 Then
-                MsgBox("Ingresar al menos un producto para facturar la venta", MsgBoxStyle.Information, "INNOVAMASTER")
+                XtraMessageBox.Show("Ingresar al menos un producto para facturar la venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Else
                 If EditarVenta() = True Then
@@ -661,18 +656,18 @@ Public Class FrmFacturacionVenta
                     Dim monto As Double
                     If re = vbNullString Then
 
-                        MsgBox("Campo no Valido", MsgBoxStyle.Critical, "INNOVAMASTER")
+                        XtraMessageBox.Show("Campo no Valido", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
                     ElseIf IsNumeric(re) Then
                         monto = CDbl(re)
                     Else
 
-                        MsgBox("Campo no Valido", MsgBoxStyle.Critical, "INNOVAMASTER")
+                        XtraMessageBox.Show("Campo no Valido", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
                     End If
                     If monto < CDbl(TxtTotal.Text) Then
 
-                        MsgBox("El Monto de Pago es muy bajo para Facturar", MsgBoxStyle.Critical, "INNOVAMASTER")
+                        XtraMessageBox.Show("El Monto de Pago es muy bajo para Facturar", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
                     Else
                         LblCambio.Text = monto - CDbl(TxtTotal.Text)
@@ -723,7 +718,7 @@ Public Class FrmFacturacionVenta
                         End Try
                         Label7.Text = "1"
 
-                        MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
+                        XtraMessageBox.Show("Productos facturados con éxito, Vamos a Imprimir la Factura", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                         If r = DialogResult.Yes Then
                             FrmFactura.var = 1
@@ -750,19 +745,12 @@ Public Class FrmFacturacionVenta
                             End Try
 
                         End If
-
-
-
                     Else
 
                         DgvDetalle.AllowUserToAddRows = True
-                        MsgBox("Tiene que Ingresar algunos Códigos de Producto", MsgBoxStyle.Critical, "INNOVAMASTER")
-
+                        XtraMessageBox.Show("Tiene que Ingresar algunos Códigos de Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
-
-
-
-
+                    
                 End If
             End If
         End If
@@ -882,7 +870,7 @@ Public Class FrmFacturacionVenta
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles BtnCancelar.Click
-        Dim r As DialogResult = MessageBox.Show("¿Desea Cancelar la Venta?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim r As DialogResult = XtraMessageBox.Show("¿Desea Cancelar la Venta?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If r = DialogResult.Yes Then
 
             Conec.Conectarse()
@@ -917,7 +905,7 @@ Public Class FrmFacturacionVenta
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles BtnEliminarTodo.Click
-        Dim r As DialogResult = MessageBox.Show("¿Desea Eliminar Todos los Productos de la Venta?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim r As DialogResult = XtraMessageBox.Show("¿Desea Eliminar Todos los Productos de la Venta?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If r = DialogResult.Yes Then
             Conec.Conectarse()
             For Each fila As DataGridViewRow In DgvDetalle.Rows
@@ -980,23 +968,23 @@ Public Class FrmFacturacionVenta
         If TxtIdVenta.Text = Nothing Then
             estado = False
         ElseIf CboCliente.EditValue = Nothing Then
-            MsgBox("Ingrese el Código de Cliente", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("Ingrese el Código de Cliente", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         ElseIf TxtFechaVenta.Text = Nothing Then
             estado = False
         ElseIf TxtFechaVencimiento.Text = Nothing Then
-            MsgBox("Ingrese la Fecha de Vencimiento de la Venta", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("Ingrese la Fecha de Vencimiento de la Venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         ElseIf CboFV.Text = Nothing Then
-            MsgBox("Seleccione la Forma de la Venta", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("Seleccione la Forma de la Venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         ElseIf CboTV.Text = Nothing Then
-            MsgBox("Seleccione el Tipo de Venta", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("Seleccione el Tipo de Venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         ElseIf FrmMenuPrincipal.LblIdUsuario.Text = Nothing Then
             estado = False
         ElseIf LblNombre.Text = "0" Then
-            MsgBox("El Cliente No esta Registrado", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("El Cliente No esta Registrado", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         Else
             Try
@@ -1065,23 +1053,23 @@ Public Class FrmFacturacionVenta
         If TxtIdVenta.Text = Nothing Then
             estado = False
         ElseIf CboCliente.EditValue = Nothing Then
-            MsgBox("Ingrese el Código de Cliente", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("Ingrese el Código de Cliente", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         ElseIf TxtFechaVenta.Text = Nothing Then
             estado = False
         ElseIf TxtFechaVencimiento.EditValue = Nothing Then
-            MsgBox("Ingrese la Fecha de Vencimiento de la Venta", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("Ingrese la Fecha de Vencimiento de la Venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         ElseIf CboFV.Text = Nothing Then
-            MsgBox("Seleccione la Forma de la Venta", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("Seleccione la Forma de la Venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         ElseIf CboTV.Text = Nothing Then
-            MsgBox("Seleccione el Tipo de Venta", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("Seleccione el Tipo de Venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         ElseIf FrmMenuPrincipal.LblIdUsuario.Text = Nothing Then
             estado = False
         ElseIf LblNombre.Text = "0" Then
-            MsgBox("El Cliente No esta Registrado", MsgBoxStyle.Critical, "Error")
+            XtraMessageBox.Show("El Cliente No esta Registrado", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         Else
             Try
@@ -1201,7 +1189,7 @@ Public Class FrmFacturacionVenta
         If h = True Then
 
         ElseIf Label7.Text = "0" Then
-            Dim r As DialogResult = MessageBox.Show("¿Desea Cancelar la Venta?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            Dim r As DialogResult = XtraMessageBox.Show("¿Desea Cancelar la Venta?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If r = DialogResult.Yes Then
                 Conec.Conectarse()
                 For Each fila As DataGridViewRow In DgvDetalle.Rows

@@ -191,7 +191,9 @@ Public Class FrmCategoria
     End Sub
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
-        GCPrincipal.ShowPrintPreview()
+        PrintableComponentLink1.CreateDocument()
+        PrintableComponentLink1.ShowPreview()
+
     End Sub
 
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click

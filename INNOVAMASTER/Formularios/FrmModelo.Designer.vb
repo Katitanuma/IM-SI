@@ -51,6 +51,8 @@ Partial Class FrmModelo
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
+        Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
+        Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         CType(Me.TxtModelo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtIdModelo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CboMarca.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +61,7 @@ Partial Class FrmModelo
         CType(Me.DgvModelo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GbModelo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbModelo.SuspendLayout()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelControl4
@@ -360,6 +363,18 @@ Partial Class FrmModelo
         Me.SimpleButton4.TabIndex = 133
         Me.SimpleButton4.Text = "Exportar PDF"
         '
+        'PrintingSystem1
+        '
+        Me.PrintingSystem1.Links.AddRange(New Object() {Me.PrintableComponentLink1})
+        '
+        'PrintableComponentLink1
+        '
+        Me.PrintableComponentLink1.Component = Me.GCPrincipal
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink1.PageHeaderFooter = New DevExpress.XtraPrinting.PageHeaderFooter(New DevExpress.XtraPrinting.PageHeaderArea(New String(-1) {}, New System.Drawing.Font("Racing Sans One", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Center), New DevExpress.XtraPrinting.PageFooterArea(New String() {"INNOVAMASTER: [User Name]", "[Date Printed] [Time Printed]", "[Page # of Pages #]"}, New System.Drawing.Font("Racing Sans One", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Center))
+        Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
+        '
         'FrmModelo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -394,6 +409,7 @@ Partial Class FrmModelo
         CType(Me.GbModelo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GbModelo.ResumeLayout(False)
         Me.GbModelo.PerformLayout()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -425,4 +441,6 @@ Partial Class FrmModelo
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton5 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents PrintingSystem1 As DevExpress.XtraPrinting.PrintingSystem
+    Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
 End Class

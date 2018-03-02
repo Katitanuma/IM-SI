@@ -22,6 +22,7 @@ Partial Class FrmPExistencia
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPExistencia))
         Me.GCPrincipal = New DevExpress.XtraGrid.GridControl()
         Me.DgvProducto = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -34,12 +35,15 @@ Partial Class FrmPExistencia
         Me.BtnExportarPDF = New DevExpress.XtraEditors.SimpleButton()
         Me.BtnExportarExcel = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
+        Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DigitalBackgroundLayerComponent1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DigitalBackgroundLayerComponent2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DigitalGauge1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DigitalBackgroundLayerComponent3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GCPrincipal
@@ -176,6 +180,18 @@ Partial Class FrmPExistencia
         Me.SimpleButton1.TabIndex = 146
         Me.SimpleButton1.Text = "Vista Previa"
         '
+        'PrintingSystem1
+        '
+        Me.PrintingSystem1.Links.AddRange(New Object() {Me.PrintableComponentLink1})
+        '
+        'PrintableComponentLink1
+        '
+        Me.PrintableComponentLink1.Component = Me.GCPrincipal
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 38)
+        Me.PrintableComponentLink1.PageHeaderFooter = New DevExpress.XtraPrinting.PageHeaderFooter(New DevExpress.XtraPrinting.PageHeaderArea(New String(-1) {}, New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Center), New DevExpress.XtraPrinting.PageFooterArea(New String() {"INNOVAMASTER: [User Name]", "[Date Printed] [Time Printed]", "[Page # of Pages #]"}, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Near))
+        Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
+        '
         'FrmPExistencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -197,6 +213,7 @@ Partial Class FrmPExistencia
         CType(Me.DigitalBackgroundLayerComponent2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DigitalGauge1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DigitalBackgroundLayerComponent3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -212,4 +229,6 @@ Partial Class FrmPExistencia
     Friend WithEvents BtnExportarPDF As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents BtnExportarExcel As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents PrintingSystem1 As DevExpress.XtraPrinting.PrintingSystem
+    Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
 End Class

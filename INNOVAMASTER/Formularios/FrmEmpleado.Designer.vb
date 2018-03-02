@@ -91,6 +91,8 @@ Partial Class FrmEmpleado
         Me.LabelControl15 = New DevExpress.XtraEditors.LabelControl()
         Me.TxtIdEmpleado = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
+        Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,6 +117,7 @@ Partial Class FrmEmpleado
         CType(Me.TxtApellidos.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtNombres.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtIdEmpleado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
@@ -362,6 +365,7 @@ Partial Class FrmEmpleado
         Me.ColEstadoC.Name = "ColEstadoC"
         Me.ColEstadoC.Visible = True
         Me.ColEstadoC.VisibleIndex = 9
+        Me.ColEstadoC.Width = 100
         '
         'ColProfesion
         '
@@ -376,6 +380,7 @@ Partial Class FrmEmpleado
         Me.ColProfesion.Name = "ColProfesion"
         Me.ColProfesion.Visible = True
         Me.ColProfesion.VisibleIndex = 12
+        Me.ColProfesion.Width = 100
         '
         'ColSexo
         '
@@ -390,6 +395,7 @@ Partial Class FrmEmpleado
         Me.ColSexo.Name = "ColSexo"
         Me.ColSexo.Visible = True
         Me.ColSexo.VisibleIndex = 11
+        Me.ColSexo.Width = 100
         '
         'ColSucursal
         '
@@ -404,6 +410,7 @@ Partial Class FrmEmpleado
         Me.ColSucursal.Name = "ColSucursal"
         Me.ColSucursal.Visible = True
         Me.ColSucursal.VisibleIndex = 13
+        Me.ColSucursal.Width = 100
         '
         'SimpleButton5
         '
@@ -870,9 +877,23 @@ Partial Class FrmEmpleado
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.LabelControl1.Location = New System.Drawing.Point(73, 10)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(263, 43)
+        Me.LabelControl1.Size = New System.Drawing.Size(262, 43)
         Me.LabelControl1.TabIndex = 160
         Me.LabelControl1.Text = "Perfil del Empleado"
+        '
+        'PrintingSystem1
+        '
+        Me.PrintingSystem1.Links.AddRange(New Object() {Me.PrintableComponentLink1})
+        '
+        'PrintableComponentLink1
+        '
+        Me.PrintableComponentLink1.Component = Me.GCPrincipal
+        Me.PrintableComponentLink1.Landscape = True
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(20, 20, 20, 20)
+        Me.PrintableComponentLink1.PageHeaderFooter = New DevExpress.XtraPrinting.PageHeaderFooter(New DevExpress.XtraPrinting.PageHeaderArea(New String(-1) {}, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Center), New DevExpress.XtraPrinting.PageFooterArea(New String() {"INNOVAMASTER: [User Name]", "[Date Printed] [Time Printed]", "[Page # of Pages #]"}, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Center))
+        Me.PrintableComponentLink1.PaperKind = System.Drawing.Printing.PaperKind.Legal
+        Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
         '
         'FrmEmpleado
         '
@@ -927,6 +948,7 @@ Partial Class FrmEmpleado
         CType(Me.TxtApellidos.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtNombres.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtIdEmpleado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -998,4 +1020,6 @@ Partial Class FrmEmpleado
     Friend WithEvents TxtIdEmpleado As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents PbEmpleado As DevExpress.XtraEditors.PictureEdit
+    Friend WithEvents PrintingSystem1 As DevExpress.XtraPrinting.PrintingSystem
+    Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
 End Class

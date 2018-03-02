@@ -72,6 +72,8 @@ Partial Class FrmCliente
         Me.BtnActualizar = New DevExpress.XtraEditors.SimpleButton()
         Me.GbCliente = New DevExpress.XtraEditors.GroupControl()
         Me.LabelControl11 = New DevExpress.XtraEditors.LabelControl()
+        Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
+        Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CboSexo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CboEstadoCivil.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,6 +90,7 @@ Partial Class FrmCliente
         CType(Me.DgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GbCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbCliente.SuspendLayout()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label11
@@ -536,6 +539,19 @@ Partial Class FrmCliente
         resources.ApplyResources(Me.LabelControl11, "LabelControl11")
         Me.LabelControl11.Name = "LabelControl11"
         '
+        'PrintingSystem1
+        '
+        Me.PrintingSystem1.Links.AddRange(New Object() {Me.PrintableComponentLink1})
+        '
+        'PrintableComponentLink1
+        '
+        Me.PrintableComponentLink1.Component = Me.GCPrincipal
+        Me.PrintableComponentLink1.Landscape = True
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink1.PageHeaderFooter = New DevExpress.XtraPrinting.PageHeaderFooter(Nothing, New DevExpress.XtraPrinting.PageFooterArea(New String() {"INNOVAMASTER [User Name]", "[Date Printed] [Time Printed]", "[Page # of Pages #]"}, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Near))
+        Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
+        '
         'FrmCliente
         '
         resources.ApplyResources(Me, "$this")
@@ -578,6 +594,7 @@ Partial Class FrmCliente
         CType(Me.GbCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GbCliente.ResumeLayout(False)
         Me.GbCliente.PerformLayout()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -630,4 +647,6 @@ Partial Class FrmCliente
     Friend WithEvents TxtFecha As DevExpress.XtraEditors.DateEdit
     Friend WithEvents TxtIdCliente As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl11 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents PrintingSystem1 As DevExpress.XtraPrinting.PrintingSystem
+    Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
 End Class

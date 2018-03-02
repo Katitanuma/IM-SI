@@ -846,10 +846,9 @@ Partial Class FrmProducto
         Me.PrintableComponentLink1.ImageCollection.Images.SetKeyName(1, "logo2.png")
         Me.PrintableComponentLink1.Landscape = True
         Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink1.PageHeaderFooter = New DevExpress.XtraPrinting.PageHeaderFooter(Nothing, New DevExpress.XtraPrinting.PageFooterArea(New String() {"INNOVAMASTER: [User Name]", "[Date Printed] [Time Printed]", "[Page # of Pages #]"}, New System.Drawing.Font("Racing Sans One", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Center))
         Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
-        Me.PrintableComponentLink1.RtfReportFooter = resources.GetString("PrintableComponentLink1.RtfReportFooter")
         Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
-        Me.PrintableComponentLink1.SkipArea = CType((DevExpress.XtraPrinting.BrickModifier.MarginalHeader Or DevExpress.XtraPrinting.BrickModifier.MarginalFooter), DevExpress.XtraPrinting.BrickModifier)
         '
         'FrmProducto
         '
