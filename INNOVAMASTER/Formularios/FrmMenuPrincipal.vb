@@ -492,4 +492,9 @@ Public Class FrmMenuPrincipal
         FrmPedidos.Focus()
         FrmPedidos.Show()
     End Sub
+
+    Private Sub BarButtonItem45_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem45.ItemClick
+        Dim reporte As New XtraReportVentas(Now, Now, False, Now, "0505-1932-12321")
+        MostrarReporte(String.Format("Estes es un Titulo"), reporte, Me)
+    End Sub
 End Class
