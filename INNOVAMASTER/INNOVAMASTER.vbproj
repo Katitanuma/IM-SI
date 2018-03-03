@@ -169,6 +169,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsReportes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datos\DatosBUsquedaPed.vb" />
     <Compile Include="Datos\DatosCargo.vb" />
     <Compile Include="Datos\DatosCategoria.vb" />
     <Compile Include="Datos\DatosCliente.vb" />
@@ -188,6 +189,12 @@
       <DependentUpon>Acerca de InnovaMaster.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Acerca de InnovaMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BusquedaPedidos.Designer.vb">
+      <DependentUpon>BusquedaPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BusquedaPedidos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FormularioDocument.Designer.vb">
@@ -408,6 +415,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Funciones\Conexion.vb" />
+    <Compile Include="Funciones\FBUSQUEDAP.vb" />
     <Compile Include="Funciones\FCargo.vb" />
     <Compile Include="Funciones\Fcategoria.vb" />
     <Compile Include="Funciones\Fcliente.vb" />
@@ -517,6 +525,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Formularios\Acerca de InnovaMaster.resx">
       <DependentUpon>Acerca de InnovaMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BusquedaPedidos.resx">
+      <DependentUpon>BusquedaPedidos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormularioDocument.resx">
       <DependentUpon>FormularioDocument.vb</DependentUpon>

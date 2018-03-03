@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
+Imports DevExpress.XtraEditors
+
 Public Class FrmProducto
     Dim dt As New DataTable
     Dim Conec As New Conexion
@@ -59,7 +61,7 @@ Public Class FrmProducto
         PbProducto.Image = Nothing
     End Sub
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
-        Dim r As DialogResult = MessageBox.Show("¿Desea Cancelar el Proceso?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim r As DialogResult = XtraMessageBox.Show("¿Desea Cancelar el Proceso?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If r = DialogResult.Yes Then
             GCPrincipal.Enabled = True
             GbProducto.Enabled = False
@@ -99,28 +101,28 @@ Public Class FrmProducto
             GCPrincipal.Enabled = False
             BtnCodigoProveedor.Visible = True
         Else
-            MessageBox.Show("Seleccione el Producto a Editar", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Seleccione el Producto a Editar", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
 
 
     End Sub
     Private Sub BtnInsertar_Click(sender As Object, e As EventArgs) Handles BtnInsertar.Click
         If TxtIdProducto.Text = Nothing Then
-            MessageBox.Show("Ingrese el Código del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Código del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf TxtDescripcion.Text = Nothing Then
-            MessageBox.Show("Ingrese la Descripción del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese la Descripción del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CDbl(TxtCosto.Value) <= 0 Then
-            MessageBox.Show("Ingrese el Costo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Costo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CDbl(TxtPrecioUnitario.Value) <= 0 Then
-            MessageBox.Show("Ingrese el Precio Unitario del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Precio Unitario del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CDbl(TxtPrecioMayorista.Value) <= 0 Then
-            MessageBox.Show("Ingrese el Precio Unitario del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Precio Unitario del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CboCategoria.EditValue = Nothing Then
-            MessageBox.Show("Seleccione la Categoria del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Seleccione la Categoria del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CboModelo.EditValue = Nothing Then
-            MessageBox.Show("Ingrese el Modelo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Modelo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CInt(TxtExistencia.Value) <= 5 Then
-            MessageBox.Show("No se Puede Ingresar Menor de 5 Productos en Existencia", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("No se Puede Ingresar Menor de 5 Productos en Existencia", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Else
             Try
                 Dim datos As New DatosProducto
@@ -160,7 +162,7 @@ Public Class FrmProducto
 
 
                 If funcion.Insertar(datos) Then
-                    MessageBox.Show("Producto Insertado Con éxito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    XtraMessageBox.Show("Producto Insertado Con éxito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     GbProducto.Enabled = False
                     TxtIdProducto.EditValue = Nothing
                     TxtDescripcion.EditValue = Nothing
@@ -244,21 +246,21 @@ Public Class FrmProducto
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
         If TxtIdProducto.Text = Nothing Then
-            MessageBox.Show("Ingrese el Código del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Código del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf TxtDescripcion.Text = Nothing Then
-            MessageBox.Show("Ingrese la Descripción del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese la Descripción del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CDbl(TxtCosto.Value) <= 0 Then
-            MessageBox.Show("Ingrese el Costo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Costo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CDbl(TxtPrecioUnitario.Value) <= 0 Then
-            MessageBox.Show("Ingrese el Precio Unitario del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Precio Unitario del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CDbl(TxtPrecioMayorista.Value) <= 0 Then
-            MessageBox.Show("Ingrese el Precio Unitario del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Precio Unitario del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CboCategoria.EditValue = Nothing Then
-            MessageBox.Show("Seleccione la Categoria del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Seleccione la Categoria del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CboModelo.EditValue = Nothing Then
-            MessageBox.Show("Ingrese el Modelo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Ingrese el Modelo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CInt(TxtExistencia.Value) <= 5 Then
-            MessageBox.Show("No se Puede Ingresar Menor de 5 Productos en Existencia", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("No se Puede Ingresar Menor de 5 Productos en Existencia", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Else
             Try
                 Dim datos As New DatosProducto
@@ -298,7 +300,7 @@ Public Class FrmProducto
 
 
                 If funcion.Editar(datos) Then
-                    MessageBox.Show("Producto Editado Con éxito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    XtraMessageBox.Show("Producto Editado Con éxito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     GbProducto.Enabled = False
                     TxtIdProducto.EditValue = Nothing
                     TxtDescripcion.EditValue = Nothing

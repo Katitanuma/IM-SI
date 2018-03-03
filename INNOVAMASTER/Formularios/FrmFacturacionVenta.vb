@@ -1223,7 +1223,10 @@ Public Class FrmFacturacionVenta
     End Sub
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        FrmSeleccionarProducto.var = 1
         FrmSeleccionarProducto.ShowDialog()
+
+
     End Sub
 
     Private Sub CboCliente_EditValueChanged(sender As Object, e As EventArgs) Handles CboCliente.EditValueChanged

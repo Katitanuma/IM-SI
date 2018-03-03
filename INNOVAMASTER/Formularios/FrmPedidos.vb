@@ -450,7 +450,7 @@ Public Class FrmPedidos
         End If
 
     End Sub
-    Private Sub LlenarTextBox()
+    Public Sub LlenarTextBox()
         TxtTotal.EditValue = Nothing
         TxtTotal.EditValue = 0
         TxtSubtotal.EditValue = Nothing
@@ -718,5 +718,18 @@ Public Class FrmPedidos
             TxtSubtotal.EditValue = "0.00"
             TxtImpuesto.EditValue = "0.00"
         End If
+    End Sub
+
+    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+        If CboProveedor.EditValue = Nothing Then
+            XtraMessageBox.Show("Seleccione el Proveedor", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            BusquedaPedidos.P = CboProveedor.EditValue
+            BusquedaPedidos.ShowDialog()
+
+        End If
+
+        '    FrmSeleccionarProducto.var = 2
+        '    FrmSeleccionarProducto.ShowDialog()
     End Sub
 End Class
