@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmCliente
+Partial Class BtnBuesquedaEC
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,7 +23,7 @@ Partial Class FrmCliente
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCliente))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BtnBuesquedaEC))
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -62,7 +62,7 @@ Partial Class FrmCliente
         Me.ColMunicipio = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColEstadoCivil = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnBusquedaMunicipio = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.BtnCancelar = New DevExpress.XtraEditors.SimpleButton()
@@ -454,11 +454,11 @@ Partial Class FrmCliente
         resources.ApplyResources(Me.SimpleButton5, "SimpleButton5")
         Me.SimpleButton5.Name = "SimpleButton5"
         '
-        'SimpleButton4
+        'BtnBusquedaMunicipio
         '
-        Me.SimpleButton4.Image = CType(resources.GetObject("SimpleButton4.Image"), System.Drawing.Image)
-        resources.ApplyResources(Me.SimpleButton4, "SimpleButton4")
-        Me.SimpleButton4.Name = "SimpleButton4"
+        Me.BtnBusquedaMunicipio.Image = CType(resources.GetObject("BtnBusquedaMunicipio.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.BtnBusquedaMunicipio, "BtnBusquedaMunicipio")
+        Me.BtnBusquedaMunicipio.Name = "BtnBusquedaMunicipio"
         '
         'SimpleButton2
         '
@@ -552,7 +552,7 @@ Partial Class FrmCliente
         Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
         Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
         '
-        'FrmCliente
+        'BtnBuesquedaEC
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -564,7 +564,7 @@ Partial Class FrmCliente
         Me.Controls.Add(Me.BtnInsertar)
         Me.Controls.Add(Me.BtnActualizar)
         Me.Controls.Add(Me.SimpleButton5)
-        Me.Controls.Add(Me.SimpleButton4)
+        Me.Controls.Add(Me.BtnBusquedaMunicipio)
         Me.Controls.Add(Me.SimpleButton2)
         Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Me.GCPrincipal)
@@ -574,7 +574,7 @@ Partial Class FrmCliente
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.HelpButton = True
         Me.HelpProvider1.SetHelpNavigator(Me, CType(resources.GetObject("$this.HelpNavigator"), System.Windows.Forms.HelpNavigator))
-        Me.Name = "FrmCliente"
+        Me.Name = "BtnBuesquedaEC"
         Me.HelpProvider1.SetShowHelp(Me, CType(resources.GetObject("$this.ShowHelp"), Boolean))
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -610,7 +610,7 @@ Partial Class FrmCliente
     Friend WithEvents ColNombreCompleto As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColDireccion As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents SimpleButton5 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnBusquedaMunicipio As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents ColTelefono As DevExpress.XtraGrid.Columns.GridColumn

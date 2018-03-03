@@ -204,4 +204,12 @@ Public Class FrmMarca
         TxtIdMarca.EditValue = DgvMarca.GetRowCellValue(index, ColIdMarca)
         TxtMarca.EditValue = DgvMarca.GetRowCellValue(index, ColMarca)
     End Sub
+
+    Private Sub GCPrincipal_DoubleClick(sender As Object, e As EventArgs) Handles GCPrincipal.DoubleClick
+        If var = 1 Then
+            FrmModelo.LlenarComboboxMarca()
+            FrmModelo.CboMarca.EditValue = DgvMarca.GetRowCellValue(DgvMarca.FocusedRowHandle, ColIdMarca)
+            Me.Close()
+        End If
+    End Sub
 End Class

@@ -83,6 +83,8 @@ Partial Class FrmUsuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
+        Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         CType(Me.layoutViewField_ColEstado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +106,7 @@ Partial Class FrmUsuario
         CType(Me.TxtContra.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtUsuario.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtIdUsuario.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ColEstado
@@ -745,6 +748,18 @@ Partial Class FrmUsuario
         Me.LabelControl1.TabIndex = 149
         Me.LabelControl1.Text = "Perfil del Usuario"
         '
+        'PrintingSystem1
+        '
+        Me.PrintingSystem1.Links.AddRange(New Object() {Me.PrintableComponentLink1})
+        '
+        'PrintableComponentLink1
+        '
+        Me.PrintableComponentLink1.Component = Me.GCPrincipal
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 43)
+        Me.PrintableComponentLink1.PageHeaderFooter = New DevExpress.XtraPrinting.PageHeaderFooter(Nothing, New DevExpress.XtraPrinting.PageFooterArea(New String() {"INNOVAMASTER: [User Name]", "[Date Printed] [Time Printed]", "[Page # of Pages #]"}, New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Near))
+        Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
+        '
         'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -800,6 +815,7 @@ Partial Class FrmUsuario
         CType(Me.TxtContra.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtUsuario.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtIdUsuario.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -861,4 +877,6 @@ Partial Class FrmUsuario
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents PrintingSystem1 As DevExpress.XtraPrinting.PrintingSystem
+    Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
 End Class

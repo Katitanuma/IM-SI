@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ReporteProductos
     Inherits FrmReportesBase
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ReporteProductos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.GCPrincipal = New DevExpress.XtraGrid.GridControl()
@@ -60,7 +60,7 @@ Partial Class ReporteProductos
         Me.LblEtiqueta.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LblEtiqueta.Appearance.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.LblEtiqueta.Location = New System.Drawing.Point(347, 12)
-        Me.LblEtiqueta.Size = New System.Drawing.Size(283, 43)
+        Me.LblEtiqueta.Size = New System.Drawing.Size(282, 43)
         Me.LblEtiqueta.Text = "Reporte de Productos"
         '
         'GCPrincipal
