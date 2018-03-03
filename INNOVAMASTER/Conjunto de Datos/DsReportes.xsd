@@ -2,14 +2,15 @@
 <xs:schema id="DsReportes" targetNamespace="http://tempuri.org/DsReportes.xsd" xmlns:mstns="http://tempuri.org/DsReportes.xsd" xmlns="http://tempuri.org/DsReportes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="INNOVAMASTERBDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="INNOVAMASTERBDConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.INNOVAMASTER.My.MySettings.GlobalReference.Default.INNOVAMASTERBDConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="INNOVAMASTERBDConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="INNOVAMASTERBDConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.INNOVAMASTER.My.MySettings.GlobalReference.Default.INNOVAMASTERBDConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Conect" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Conect (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.INNOVAMASTER.My.MySettings.GlobalReference.Default.Conect" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteVentaTableAdapter" GeneratorDataComponentClassName="ReporteVentaTableAdapter" Name="ReporteVenta" UserDataComponentName="ReporteVentaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="INNOVAMASTERBDConnectionString (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReporteVenta" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Conect (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReporteVenta" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ReporteVenta</CommandText>
@@ -41,7 +42,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteClienteTableAdapter" GeneratorDataComponentClassName="ReporteClienteTableAdapter" Name="ReporteCliente" UserDataComponentName="ReporteClienteTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="INNOVAMASTERBDConnectionString (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReporteCliente" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Conect (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReporteCliente" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ReporteCliente</CommandText>
@@ -65,7 +66,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteProductoTableAdapter" GeneratorDataComponentClassName="ReporteProductoTableAdapter" Name="ReporteProducto" UserDataComponentName="ReporteProductoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="INNOVAMASTERBDConnectionString (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReporteProducto" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Conect (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReporteProducto" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ReporteProducto</CommandText>
@@ -89,7 +90,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteCompraTableAdapter" GeneratorDataComponentClassName="ReporteCompraTableAdapter" Name="ReporteCompra" UserDataComponentName="ReporteCompraTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="INNOVAMASTERBDConnectionString (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReporteCompra" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Conect (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReporteCompra" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ReporteCompra</CommandText>
@@ -118,7 +119,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReportePedidoTableAdapter" GeneratorDataComponentClassName="ReportePedidoTableAdapter" Name="ReportePedido" UserDataComponentName="ReportePedidoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="INNOVAMASTERBDConnectionString (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReportePedido" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Conect (MySettings)" DbObjectName="INNOVAMASTERBD.dbo.ReportePedido" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ReportePedido</CommandText>
@@ -139,6 +140,35 @@
               <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
               <Mapping SourceColumn="IdProducto" DataSetColumn="IdProducto" />
               <Mapping SourceColumn="RTN" DataSetColumn="RTN" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Sp_ReporteVentasFechaTableAdapter" GeneratorDataComponentClassName="Sp_ReporteVentasFechaTableAdapter" Name="Sp_ReporteVentasFecha" UserDataComponentName="Sp_ReporteVentasFechaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conect (MySettings)" DbObjectName="INNOVAMASTERBD.REPORTES.Sp_ReporteVentasFecha" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>REPORTES.Sp_ReporteVentasFecha</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@EsReporteDiario" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@FechaInicial" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@FechaFinal" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@Dia" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@IdCliente" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdVenta" DataSetColumn="IdVenta" />
+              <Mapping SourceColumn="Código" DataSetColumn="Código" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="Subtotal" DataSetColumn="Subtotal" />
+              <Mapping SourceColumn="Impuesto" DataSetColumn="Impuesto" />
+              <Mapping SourceColumn="Descuento" DataSetColumn="Descuento" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -395,6 +425,37 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Sp_ReporteVentasFecha" msprop:Generator_TableClassName="Sp_ReporteVentasFechaDataTable" msprop:Generator_TableVarName="tableSp_ReporteVentasFecha" msprop:Generator_RowChangedName="Sp_ReporteVentasFechaRowChanged" msprop:Generator_TablePropName="Sp_ReporteVentasFecha" msprop:Generator_RowDeletingName="Sp_ReporteVentasFechaRowDeleting" msprop:Generator_RowChangingName="Sp_ReporteVentasFechaRowChanging" msprop:Generator_RowEvHandlerName="Sp_ReporteVentasFechaRowChangeEventHandler" msprop:Generator_RowDeletedName="Sp_ReporteVentasFechaRowDeleted" msprop:Generator_RowClassName="Sp_ReporteVentasFechaRow" msprop:Generator_UserTableName="Sp_ReporteVentasFecha" msprop:Generator_RowEvArgName="Sp_ReporteVentasFechaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdVenta" msprop:Generator_ColumnVarNameInTable="columnIdVenta" msprop:Generator_ColumnPropNameInRow="IdVenta" msprop:Generator_ColumnPropNameInTable="IdVentaColumn" msprop:Generator_UserColumnName="IdVenta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subtotal" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSubtotal" msprop:Generator_ColumnPropNameInRow="Subtotal" msprop:Generator_ColumnPropNameInTable="SubtotalColumn" msprop:Generator_UserColumnName="Subtotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Impuesto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnImpuesto" msprop:Generator_ColumnPropNameInRow="Impuesto" msprop:Generator_ColumnPropNameInTable="ImpuestoColumn" msprop:Generator_UserColumnName="Impuesto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Descuento" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDescuento" msprop:Generator_ColumnPropNameInRow="Descuento" msprop:Generator_ColumnPropNameInTable="DescuentoColumn" msprop:Generator_UserColumnName="Descuento" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -408,6 +469,11 @@
     <xs:unique name="ReportePedido_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ReportePedido" />
       <xs:field xpath="mstns:IdPedido" />
+    </xs:unique>
+    <xs:unique name="Sp_ReporteVentasFecha_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Sp_ReporteVentasFecha" />
+      <xs:field xpath="mstns:IdVenta" />
+      <xs:field xpath="mstns:Código" />
     </xs:unique>
   </xs:element>
 </xs:schema>

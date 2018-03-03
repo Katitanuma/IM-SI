@@ -107,6 +107,7 @@ Partial Class FrmMenuPrincipal
         Me.pcFondo = New DevExpress.XtraEditors.PanelControl()
         Me.LblIdUsuario = New System.Windows.Forms.Label()
         Me.TxtIdVenta = New System.Windows.Forms.Label()
+        Me.BarButtonItem45 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApplicationMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,9 +119,9 @@ Partial Class FrmMenuPrincipal
         Me.RibbonControl.ApplicationButtonDropDownControl = Me.ApplicationMenu1
         Me.RibbonControl.ApplicationIcon = Global.INNOVAMASTER.My.Resources.Resources.Logo_BUeno
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 8
+        Me.RibbonControl.MaxItemId = 9
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage5, Me.RibbonPage3, Me.RibbonPage6, Me.RibbonPage8, Me.RibbonPage10, Me.RibbonPage11})
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem29)
@@ -437,6 +438,7 @@ Partial Class FrmMenuPrincipal
         Me.RibbonPageGroupReportes.ItemLinks.Add(Me.BarButtonItem15)
         Me.RibbonPageGroupReportes.ItemLinks.Add(Me.BarButtonItem18)
         Me.RibbonPageGroupReportes.ItemLinks.Add(Me.BarButtonItem20)
+        Me.RibbonPageGroupReportes.ItemLinks.Add(Me.BarButtonItem45)
         Me.RibbonPageGroupReportes.Name = "RibbonPageGroupReportes"
         Me.RibbonPageGroupReportes.Text = "Reportes"
         '
@@ -728,6 +730,12 @@ Partial Class FrmMenuPrincipal
         Me.TxtIdVenta.Text = "Label1"
         Me.TxtIdVenta.Visible = False
         '
+        'BarButtonItem45
+        '
+        Me.BarButtonItem45.Caption = "BarButtonItem45"
+        Me.BarButtonItem45.Id = 8
+        Me.BarButtonItem45.Name = "BarButtonItem45"
+        '
         'FrmMenuPrincipal
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
@@ -840,4 +848,5 @@ Partial Class FrmMenuPrincipal
     Friend WithEvents BarButtonItem43 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents TxtIdVenta As Label
     Friend WithEvents BarButtonItem44 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem45 As DevExpress.XtraBars.BarButtonItem
 End Class

@@ -52,17 +52,7 @@ Module ModuloBloques
             XtraMessageBox.Show(Ex.Message)
         End Try
     End Sub
-    Public Sub MostrarReporte(ByVal Titulo As String, ByVal Reporte As XtraReport, ByVal FormMDI As Form, Optional ByVal OcultarMenu As Boolean = False)
-        Dim _printPreview As New FormularioDocument
-        With _printPreview
-            .HideToolBars = OcultarMenu
-            .Text = Titulo
-            .MdiParent = FormMDI
-            .Report = Reporte
-            .Show()
-            .Focus()
-        End With
-    End Sub
+
 
     Public Function Encriptar(ByVal Input As String) As String
 
