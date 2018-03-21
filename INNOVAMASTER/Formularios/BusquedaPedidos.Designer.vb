@@ -30,18 +30,18 @@ Partial Class BusquedaPedidos
         Me.ColCosto = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColISV = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ColImagen = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.PbProducto = New System.Windows.Forms.PictureBox()
-        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.PbProducto = New DevExpress.XtraEditors.PictureEdit()
+        Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbProducto, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl1.SuspendLayout()
+        CType(Me.PbProducto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GCPrincipal
         '
-        Me.GCPrincipal.Location = New System.Drawing.Point(-1, 0)
+        Me.GCPrincipal.Location = New System.Drawing.Point(-1, 2)
         Me.GCPrincipal.MainView = Me.DgvProductos
         Me.GCPrincipal.Name = "GCPrincipal"
         Me.GCPrincipal.Size = New System.Drawing.Size(821, 436)
@@ -200,37 +200,49 @@ Partial Class BusquedaPedidos
         '
         'PbProducto
         '
-        Me.PbProducto.Location = New System.Drawing.Point(13, 124)
+        Me.PbProducto.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.nula
+        Me.PbProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbProducto.Location = New System.Drawing.Point(23, 118)
         Me.PbProducto.Name = "PbProducto"
-        Me.PbProducto.Size = New System.Drawing.Size(179, 176)
+        Me.PbProducto.Properties.Appearance.BackColor = System.Drawing.Color.Transparent
+        Me.PbProducto.Properties.Appearance.Options.UseBackColor = True
+        Me.PbProducto.Properties.ErrorImage = Global.INNOVAMASTER.My.Resources.Resources.nula
+        Me.PbProducto.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
+        Me.PbProducto.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch
+        Me.PbProducto.Properties.ZoomAccelerationFactor = 1.0R
+        Me.PbProducto.Size = New System.Drawing.Size(208, 220)
         Me.PbProducto.TabIndex = 106
-        Me.PbProducto.TabStop = False
         '
-        'PanelControl1
+        'GroupControl1
         '
-        Me.PanelControl1.Appearance.BackColor = System.Drawing.Color.Silver
-        Me.PanelControl1.Appearance.Options.UseBackColor = True
-        Me.PanelControl1.Controls.Add(Me.PbProducto)
-        Me.PanelControl1.Location = New System.Drawing.Point(812, 0)
-        Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(198, 436)
-        Me.PanelControl1.TabIndex = 107
+        Me.GroupControl1.AppearanceCaption.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupControl1.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Italic)
+        Me.GroupControl1.AppearanceCaption.Options.UseBackColor = True
+        Me.GroupControl1.AppearanceCaption.Options.UseFont = True
+        Me.GroupControl1.AppearanceCaption.Options.UseTextOptions = True
+        Me.GroupControl1.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GroupControl1.Controls.Add(Me.PbProducto)
+        Me.GroupControl1.Location = New System.Drawing.Point(820, 2)
+        Me.GroupControl1.Name = "GroupControl1"
+        Me.GroupControl1.Size = New System.Drawing.Size(246, 436)
+        Me.GroupControl1.TabIndex = 107
+        Me.GroupControl1.Text = "Imagen"
         '
         'BusquedaPedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1006, 435)
+        Me.ClientSize = New System.Drawing.Size(1063, 435)
+        Me.Controls.Add(Me.GroupControl1)
         Me.Controls.Add(Me.GCPrincipal)
-        Me.Controls.Add(Me.PanelControl1)
         Me.Name = "BusquedaPedidos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "BusquedaPedidos"
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbProducto, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl1.ResumeLayout(False)
+        CType(Me.PbProducto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -244,7 +256,7 @@ Partial Class BusquedaPedidos
     Friend WithEvents ColISV As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColIdProductoProveedor As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ColIdProducto As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents PbProducto As PictureBox
-    Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents ColImagen As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents PbProducto As DevExpress.XtraEditors.PictureEdit
+    Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
 End Class

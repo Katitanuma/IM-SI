@@ -281,7 +281,7 @@ Public Class FrmProducto
                 Dim ms As New MemoryStream
 
                 If PbProducto.Image Is Nothing Then
-                    PbProducto.Image = My.Resources.NULLA
+                    PbProducto.Image = My.Resources.nula
                 End If
                 PbProducto.Image.Save(ms, PbProducto.Image.RawFormat)
                 datos.gImagen = ms.GetBuffer

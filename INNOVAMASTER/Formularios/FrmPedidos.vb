@@ -717,6 +717,7 @@ Public Class FrmPedidos
             TxtTotal.EditValue = "0.00"
             TxtSubtotal.EditValue = "0.00"
             TxtImpuesto.EditValue = "0.00"
+            DgvDetalle.Focus()
         End If
     End Sub
 
