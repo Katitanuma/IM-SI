@@ -497,4 +497,9 @@ Public Class FrmMenuPrincipal
         Dim reporte As New XtraReportVentas(Now, Now, False, Now, "0505-1932-12321")
         MostrarReporte(String.Format("Estes es un Titulo"), reporte, Me)
     End Sub
+
+    Private Sub BarButtonItem46_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem46.ItemClick
+        Dim reporte As New XtraReport1()
+        MostrarReporte(String.Format("Estes es un Titulo"), reporte, Me)
+    End Sub
 End Class
