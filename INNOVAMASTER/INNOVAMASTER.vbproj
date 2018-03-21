@@ -521,6 +521,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Reportes\XtraReport1.Designer.vb">
+      <DependentUpon>XtraReport1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\XtraReport1.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\XtraReportVentas.Designer.vb">
       <DependentUpon>XtraReportVentas.vb</DependentUpon>
     </Compile>
@@ -695,6 +701,9 @@
     <EmbeddedResource Include="Reportes\RptPedido.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptPedido.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\XtraReport1.resx">
+      <DependentUpon>XtraReport1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\XtraReportVentas.resx">
       <DependentUpon>XtraReportVentas.vb</DependentUpon>
