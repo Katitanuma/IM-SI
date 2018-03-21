@@ -109,7 +109,7 @@ Partial Class BusquedaPedidos
         Me.ColIdProveedor.Caption = "Código Proveedor"
         Me.ColIdProveedor.FieldName = "IdProveedor"
         Me.ColIdProveedor.Name = "ColIdProveedor"
-        Me.ColIdProveedor.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "IdProducto", "Total Productos = {0}")})
+        Me.ColIdProveedor.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "IdProducto", "Total = {0}")})
         Me.ColIdProveedor.Visible = True
         Me.ColIdProveedor.VisibleIndex = 0
         Me.ColIdProveedor.Width = 100
@@ -220,12 +220,12 @@ Partial Class BusquedaPedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1006, 435)
+        Me.ClientSize = New System.Drawing.Size(821, 435)
         Me.Controls.Add(Me.GCPrincipal)
         Me.Controls.Add(Me.PanelControl1)
         Me.Name = "BusquedaPedidos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BusquedaPedidos"
+        Me.Text = "Productos del proveedor"
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbProducto, System.ComponentModel.ISupportInitialize).EndInit()
