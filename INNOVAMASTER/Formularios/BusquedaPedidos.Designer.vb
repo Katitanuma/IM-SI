@@ -232,12 +232,11 @@ Partial Class BusquedaPedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-<<<<<<< HEAD
+
         Me.ClientSize = New System.Drawing.Size(1063, 435)
         Me.Controls.Add(Me.GroupControl1)
-=======
+
         Me.ClientSize = New System.Drawing.Size(821, 435)
->>>>>>> 4104cd9151df7c921d2e6e42e2d82c960c1f6bec
         Me.Controls.Add(Me.GCPrincipal)
         Me.Name = "BusquedaPedidos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

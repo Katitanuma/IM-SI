@@ -120,18 +120,12 @@ Partial Class FrmMenuPrincipal
         Me.RibbonControl.ApplicationButtonDropDownControl = Me.ApplicationMenu1
         Me.RibbonControl.ApplicationIcon = Global.INNOVAMASTER.My.Resources.Resources.Logo_BUeno
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4104cd9151df7c921d2e6e42e2d82c960c1f6bec
         Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45})
 
         Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem11})
 
-=======
+
         Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem11, Me.BarButtonItem20, Me.BarButtonItem5, Me.BarButtonItem15, Me.BarButtonItem46})
->>>>>>> c75cc5c21412f106a1a8152f4b87bf52cbd2aa74
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.MaxItemId = 10
         Me.RibbonControl.Name = "RibbonControl"
