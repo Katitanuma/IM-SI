@@ -84,6 +84,7 @@ Public Class FrmProducto
             BtnCodigoProveedor.Visible = False
 
             PbProducto.Image = Nothing
+            BtnActualizar.Visible = False
         End If
 
 
@@ -98,6 +99,7 @@ Public Class FrmProducto
             BtnEditar.Visible = True
             BtnNuevo.Visible = False
             BtnEditar.Visible = False
+            BtnActualizar.Visible = True
             GCPrincipal.Enabled = False
             BtnCodigoProveedor.Visible = True
         Else
@@ -121,7 +123,7 @@ Public Class FrmProducto
             XtraMessageBox.Show("Seleccione la Categoria del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CboModelo.EditValue = Nothing Then
             XtraMessageBox.Show("Ingrese el Modelo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        ElseIf CInt(TxtExistencia.Value) <= 5 Then
+        ElseIf CDbl(TxtExistencia.Value) <= 5 Then
             XtraMessageBox.Show("No se Puede Ingresar Menor de 5 Productos en Existencia", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Else
             Try
@@ -259,7 +261,7 @@ Public Class FrmProducto
             XtraMessageBox.Show("Seleccione la Categoria del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CboModelo.EditValue = Nothing Then
             XtraMessageBox.Show("Ingrese el Modelo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        ElseIf CInt(TxtExistencia.Value) <= 5 Then
+        ElseIf CDbl(TxtExistencia.Value) <= 5 Then
             XtraMessageBox.Show("No se Puede Ingresar Menor de 5 Productos en Existencia", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Else
             Try

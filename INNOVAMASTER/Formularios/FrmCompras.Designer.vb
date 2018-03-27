@@ -63,6 +63,8 @@ Partial Class FrmCompras
         Me.ISV = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
+        Me.TxtNumeroFactura = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
@@ -77,6 +79,7 @@ Partial Class FrmCompras
         CType(Me.TxtImpuesto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtTotal.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtNumeroFactura.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblNombre
@@ -225,6 +228,8 @@ Partial Class FrmCompras
         '
         'PanelControl1
         '
+        Me.PanelControl1.Controls.Add(Me.LabelControl7)
+        Me.PanelControl1.Controls.Add(Me.TxtNumeroFactura)
         Me.PanelControl1.Controls.Add(Me.CboPedido)
         Me.PanelControl1.Controls.Add(Me.LabelControl2)
         Me.PanelControl1.Controls.Add(Me.TxtFechaCompra)
@@ -368,7 +373,7 @@ Partial Class FrmCompras
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Tahoma", 8.25!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DodgerBlue
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
@@ -455,6 +460,22 @@ Partial Class FrmCompras
         Me.LabelControl6.TabIndex = 151
         Me.LabelControl6.Text = "Compra de Productos"
         '
+        'TxtNumeroFactura
+        '
+        Me.TxtNumeroFactura.Location = New System.Drawing.Point(947, 49)
+        Me.TxtNumeroFactura.Name = "TxtNumeroFactura"
+        Me.TxtNumeroFactura.Size = New System.Drawing.Size(274, 20)
+        Me.TxtNumeroFactura.TabIndex = 154
+        '
+        'LabelControl7
+        '
+        Me.LabelControl7.Appearance.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.LabelControl7.Location = New System.Drawing.Point(947, 28)
+        Me.LabelControl7.Name = "LabelControl7"
+        Me.LabelControl7.Size = New System.Drawing.Size(123, 19)
+        Me.LabelControl7.TabIndex = 155
+        Me.LabelControl7.Text = "Número de Factura"
+        '
         'FrmCompras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -502,6 +523,7 @@ Partial Class FrmCompras
         CType(Me.TxtImpuesto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtTotal.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvDetalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtNumeroFactura.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -543,4 +565,6 @@ Partial Class FrmCompras
     Friend WithEvents Total As DataGridViewTextBoxColumn
     Friend WithEvents LabelControl6 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents CboPedido As DevExpress.XtraEditors.LookUpEdit
+    Friend WithEvents TxtNumeroFactura As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl7 As DevExpress.XtraEditors.LabelControl
 End Class

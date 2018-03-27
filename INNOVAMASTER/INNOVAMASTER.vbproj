@@ -123,6 +123,7 @@
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraMap.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -220,6 +221,24 @@
       <DependentUpon>FrmFacturacionVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmFacturacionVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmGestionReporteCompra.Designer.vb">
+      <DependentUpon>FrmGestionReporteCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmGestionReporteCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmGestionReporteVentas.Designer.vb">
+      <DependentUpon>FrmGestionReporteVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmGestionReporteVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmGraficosVentas.Designer.vb">
+      <DependentUpon>FrmGraficosVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmGraficosVentas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmLogAuditoria.Designer.vb">
@@ -527,6 +546,12 @@
     <Compile Include="Reportes\XtraReport1.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\XtraReport2.Designer.vb">
+      <DependentUpon>XtraReport2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\XtraReport2.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\XtraReportVentas.Designer.vb">
       <DependentUpon>XtraReportVentas.vb</DependentUpon>
     </Compile>
@@ -553,6 +578,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmFacturacionVenta.resx">
       <DependentUpon>FrmFacturacionVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmGestionReporteCompra.resx">
+      <DependentUpon>FrmGestionReporteCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmGestionReporteVentas.resx">
+      <DependentUpon>FrmGestionReporteVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmGraficosVentas.resx">
+      <DependentUpon>FrmGraficosVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLogAuditoria.resx">
       <DependentUpon>FrmLogAuditoria.vb</DependentUpon>
@@ -704,6 +738,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\XtraReport1.resx">
       <DependentUpon>XtraReport1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\XtraReport2.resx">
+      <DependentUpon>XtraReport2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\XtraReportVentas.resx">
       <DependentUpon>XtraReportVentas.vb</DependentUpon>

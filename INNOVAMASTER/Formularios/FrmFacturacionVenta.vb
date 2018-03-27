@@ -1072,47 +1072,74 @@ Public Class FrmFacturacionVenta
             XtraMessageBox.Show("El Cliente No esta Registrado", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             estado = False
         Else
+            If CboTV.Text <> "Contado" Then
+                Try
+                    Conec.Conectarse()
+
+                    Using cmd As New SqlCommand(String.Format("SELECT TieneCredito FROM Cliente WHERE IdCliente = '{0}'", CboCliente.EditValue.ToString), Conec.Con)
+                        cmd.CommandType = CommandType.Text
+                        Dim dr As SqlDataReader = cmd.ExecuteReader
+                        If dr.Read Then
+                            If Convert.ToBoolean(dr(0)) Then
+                            Else
+                                XtraMessageBox.Show("El cliente " & CboCliente.Text & " no tiene crédito disponible", "INNOVAMASTER")
+                                Return False
+                            End If
+                        End If
+                        dr.Close()
+                    End Using
+
+                Catch ex As Exception
+                    Return False
+                    XtraMessageBox.Show(ex.Message)
+                Finally
+                    Conec.Desconectarse()
+
+                End Try
+            End If
+
+
             Try
-                Dim datos As New DatosVenta
-                Dim funcion As New Fventa
-                If TxtDescuentoExtra.Value = Nothing Then
-                    TxtDescuentoExtra.Value = 0
-                End If
-                datos.gDescuentoExtra = CDbl(TxtDescuentoExtra.Text)
-                datos.gIdVenta = TxtIdVenta.Text
-                datos.gIdCliente = CboCliente.EditValue
-                datos.gFechaVenta = TxtFechaVenta.Text
-                datos.gFechaVencimiento = TxtFechaVencimiento.EditValue
-                If CboFV.Text = "Mayoreo" Then
-                    datos.gIdFormaVenta = 1
-                Else
-                    datos.gIdFormaVenta = 2
-                End If
+                    Dim datos As New DatosVenta
+                    Dim funcion As New Fventa
+                    If TxtDescuentoExtra.Value = Nothing Then
+                        TxtDescuentoExtra.Value = 0
+                    End If
+                    datos.gDescuentoExtra = CDbl(TxtDescuentoExtra.Text)
+                    datos.gIdVenta = TxtIdVenta.Text
+                    datos.gIdCliente = CboCliente.EditValue
+                    datos.gFechaVenta = TxtFechaVenta.Text
+                    datos.gFechaVencimiento = TxtFechaVencimiento.EditValue
+                    If CboFV.Text = "Mayoreo" Then
+                        datos.gIdFormaVenta = 1
+                    Else
+                        datos.gIdFormaVenta = 2
+                    End If
 
-                If CboTV.Text = "Contado" Then
-                    datos.gIdTipoVenta = 1
-                Else
-                    datos.gIdTipoVenta = 2
-                End If
+                    If CboTV.Text = "Contado" Then
+                        datos.gIdTipoVenta = 1
+                    Else
+                        datos.gIdTipoVenta = 2
+                    End If
 
-                datos.gDescuentoExtra = CDbl(TxtDescuentoExtra.Text)
-                datos.gIdUsuario = Int(FrmMenuPrincipal.LblIdUsuario.Text)
+                    datos.gDescuentoExtra = CDbl(TxtDescuentoExtra.Text)
+                    datos.gIdUsuario = Int(FrmMenuPrincipal.LblIdUsuario.Text)
 
-                If funcion.EditarVenta(datos) Then
-                    estado = True
-                Else
+                    If funcion.EditarVenta(datos) Then
+                        estado = True
+                    Else
+                        estado = False
+                    End If
+
+                Catch ex As Exception
+                    MsgBox(ex.ToString)
                     estado = False
-                End If
+                Finally
+                    Conec.Desconectarse()
+                End Try
 
-            Catch ex As Exception
-                MsgBox(ex.ToString)
-                estado = False
-            Finally
-                Conec.Desconectarse()
-            End Try
-
-        End If
-        Return estado
+            End If
+            Return estado
     End Function
 
     Private Sub DgvDetalle_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDetalle.CellValueChanged
@@ -1233,5 +1260,9 @@ Public Class FrmFacturacionVenta
         If CboCliente.EditValue IsNot Nothing Then
 
         End If
+    End Sub
+
+    Private Sub CboTV_Click(sender As Object, e As EventArgs) Handles CboTV.Click
+
     End Sub
 End Class

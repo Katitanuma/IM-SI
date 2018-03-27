@@ -41,6 +41,9 @@ Partial Class FrmMenuPrincipal
         Me.BarButtonItem20 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem15 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem46 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem48 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem49 = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PagVentas = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
@@ -71,6 +74,7 @@ Partial Class FrmMenuPrincipal
         Me.RibbonPageGroupReportes = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem18 = New DevExpress.XtraBars.BarButtonItem()
+        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage10 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PagConfiguracion = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem25 = New DevExpress.XtraBars.BarButtonItem()
@@ -108,7 +112,7 @@ Partial Class FrmMenuPrincipal
         Me.pcFondo = New DevExpress.XtraEditors.PanelControl()
         Me.LblIdUsuario = New System.Windows.Forms.Label()
         Me.TxtIdVenta = New System.Windows.Forms.Label()
-        Me.BarButtonItem46 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem47 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApplicationMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,9 +124,9 @@ Partial Class FrmMenuPrincipal
         Me.RibbonControl.ApplicationButtonDropDownControl = Me.ApplicationMenu1
         Me.RibbonControl.ApplicationIcon = Global.INNOVAMASTER.My.Resources.Resources.Logo_BUeno
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem11, Me.BarButtonItem20, Me.BarButtonItem5, Me.BarButtonItem15, Me.BarButtonItem46})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem11, Me.BarButtonItem20, Me.BarButtonItem5, Me.BarButtonItem15, Me.BarButtonItem46, Me.BarButtonItem48, Me.BarButtonItem49})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 10
+        Me.RibbonControl.MaxItemId = 12
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage5, Me.RibbonPage3, Me.RibbonPage6, Me.RibbonPage8, Me.RibbonPage10, Me.RibbonPage11})
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem29)
@@ -235,7 +239,7 @@ Partial Class FrmMenuPrincipal
         '
         'BarButtonItem45
         '
-        Me.BarButtonItem45.Caption = "Reporte Ventas por Fecha"
+        Me.BarButtonItem45.Caption = "Reporte Ventas"
         Me.BarButtonItem45.Glyph = CType(resources.GetObject("BarButtonItem45.Glyph"), System.Drawing.Image)
         Me.BarButtonItem45.Id = 8
         Me.BarButtonItem45.LargeGlyph = CType(resources.GetObject("BarButtonItem45.LargeGlyph"), System.Drawing.Image)
@@ -269,6 +273,29 @@ Partial Class FrmMenuPrincipal
         Me.BarButtonItem15.Id = 15
         Me.BarButtonItem15.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.reporte_producto_48x48
         Me.BarButtonItem15.Name = "BarButtonItem15"
+        '
+        'BarButtonItem46
+        '
+        Me.BarButtonItem46.Caption = "Reporte Cliente Estrella"
+        Me.BarButtonItem46.Id = 9
+        Me.BarButtonItem46.LargeGlyph = CType(resources.GetObject("BarButtonItem46.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem46.Name = "BarButtonItem46"
+        '
+        'BarButtonItem48
+        '
+        Me.BarButtonItem48.Caption = "Reporte Compras"
+        Me.BarButtonItem48.Glyph = CType(resources.GetObject("BarButtonItem48.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem48.Id = 10
+        Me.BarButtonItem48.LargeGlyph = CType(resources.GetObject("BarButtonItem48.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem48.Name = "BarButtonItem48"
+        '
+        'BarButtonItem49
+        '
+        Me.BarButtonItem49.Caption = "Gráficos"
+        Me.BarButtonItem49.Glyph = CType(resources.GetObject("BarButtonItem49.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem49.Id = 11
+        Me.BarButtonItem49.LargeGlyph = CType(resources.GetObject("BarButtonItem49.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem49.Name = "BarButtonItem49"
         '
         'RibbonPage1
         '
@@ -458,7 +485,7 @@ Partial Class FrmMenuPrincipal
         '
         'RibbonPage8
         '
-        Me.RibbonPage8.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroupReportes})
+        Me.RibbonPage8.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroupReportes, Me.RibbonPageGroup1})
         Me.RibbonPage8.Name = "RibbonPage8"
         Me.RibbonPage8.Text = "Reportes"
         '
@@ -471,6 +498,7 @@ Partial Class FrmMenuPrincipal
         Me.RibbonPageGroupReportes.ItemLinks.Add(Me.BarButtonItem18)
         Me.RibbonPageGroupReportes.ItemLinks.Add(Me.BarButtonItem45)
         Me.RibbonPageGroupReportes.ItemLinks.Add(Me.BarButtonItem46)
+        Me.RibbonPageGroupReportes.ItemLinks.Add(Me.BarButtonItem48)
         Me.RibbonPageGroupReportes.Name = "RibbonPageGroupReportes"
         Me.RibbonPageGroupReportes.Text = "Reportes"
         '
@@ -489,6 +517,13 @@ Partial Class FrmMenuPrincipal
         Me.BarButtonItem18.Id = 18
         Me.BarButtonItem18.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.reporte_compras_48x48
         Me.BarButtonItem18.Name = "BarButtonItem18"
+        '
+        'RibbonPageGroup1
+        '
+        Me.RibbonPageGroup1.AllowTextClipping = False
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem49)
+        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.Text = "Gráficos"
         '
         'RibbonPage10
         '
@@ -740,12 +775,13 @@ Partial Class FrmMenuPrincipal
         Me.TxtIdVenta.Text = "Label1"
         Me.TxtIdVenta.Visible = False
         '
-        'BarButtonItem46
+        'BarButtonItem47
         '
-        Me.BarButtonItem46.Caption = "Reporte Cliente Estrella"
-        Me.BarButtonItem46.Id = 9
-        Me.BarButtonItem46.LargeGlyph = CType(resources.GetObject("BarButtonItem46.LargeGlyph"), System.Drawing.Image)
-        Me.BarButtonItem46.Name = "BarButtonItem46"
+        Me.BarButtonItem47.Caption = "Reporte Ventas"
+        Me.BarButtonItem47.Glyph = CType(resources.GetObject("BarButtonItem47.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem47.Id = 8
+        Me.BarButtonItem47.LargeGlyph = CType(resources.GetObject("BarButtonItem47.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem47.Name = "BarButtonItem47"
         '
         'FrmMenuPrincipal
         '
@@ -861,4 +897,8 @@ Partial Class FrmMenuPrincipal
     Friend WithEvents BarButtonItem44 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem45 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem46 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem48 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem47 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem49 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
 End Class

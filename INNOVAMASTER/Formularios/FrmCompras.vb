@@ -404,7 +404,7 @@ Public Class FrmCompras
             XtraMessageBox.Show("Ingresar al menos un producto para realizar la compra", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
         Else
-            If GuardarCompra() = True Then
+            If GuardarCompra() Then
                 Conec.Conectarse()
 
 
@@ -475,7 +475,7 @@ Public Class FrmCompras
 
 
                 Next
-                XtraMessageBox.Show("Compra realizada correctamente", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                XtraMessageBox.Show("Compra realizada correctamente", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 var = 0
                 If XtraMessageBox.Show("¿Desea imprimir el reporte de la compra", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
                     If XtraMessageBox.Show("¿Desea visualizar el reporte", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
@@ -582,12 +582,13 @@ Public Class FrmCompras
                         .Parameters.Add("@Descuento", SqlDbType.Money).Value = CDbl(TxtDescuento.Text)
                         .Parameters.Add("@IdUsuario", SqlDbType.Int).Value = CInt(FrmMenuPrincipal.LblIdUsuario.Text)
                         .Parameters.Add("@FechaCompra", SqlDbType.Date).Value = TxtFechaCompra.Text
+                        .Parameters.Add("@NumeroFactura", SqlDbType.NVarChar, 50).Value = TxtNumeroFactura.Text.ToString
                         .ExecuteNonQuery()
                     End With
                     estado = True
                     s = 1
                 Catch ex As Exception
-                    XtraMessageBox.Show(ex.Message)
+                    XtraMessageBox.Show(ex.Message & "---------------" & ex.ToString)
                     estado = False
                 End Try
             End Using

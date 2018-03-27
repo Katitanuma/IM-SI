@@ -117,10 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ColTieneCredito.Caption" xml:space="preserve">
+    <value>CRÉDITO</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ColTieneCredito.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ColTieneCredito.VisibleIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -157,7 +166,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="PictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -181,7 +190,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <metadata name="HelpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>116, 17</value>
@@ -220,13 +229,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblRelacionClienteVenta.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="LabelControl10.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
   </data>
   <data name="LabelControl10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 362</value>
+    <value>91, 331</value>
   </data>
   <data name="LabelControl10.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -250,13 +259,13 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl10.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="LabelControl9.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
   </data>
   <data name="LabelControl9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 328</value>
+    <value>49, 297</value>
   </data>
   <data name="LabelControl9.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -280,13 +289,13 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl9.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="LabelControl8.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
   </data>
   <data name="LabelControl8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 297</value>
+    <value>65, 266</value>
   </data>
   <data name="LabelControl8.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -310,13 +319,13 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl8.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="LabelControl7.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
   </data>
   <data name="LabelControl7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 257</value>
+    <value>10, 234</value>
   </data>
   <data name="LabelControl7.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -340,13 +349,13 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl7.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="LabelControl6.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
   </data>
   <data name="LabelControl6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 219</value>
+    <value>81, 203</value>
   </data>
   <data name="LabelControl6.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -370,13 +379,13 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl6.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="LabelControl5.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
   </data>
   <data name="LabelControl5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 188</value>
+    <value>67, 172</value>
   </data>
   <data name="LabelControl5.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -400,13 +409,13 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="LabelControl4.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
   </data>
   <data name="LabelControl4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 128</value>
+    <value>64, 108</value>
   </data>
   <data name="LabelControl4.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -430,13 +439,13 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl4.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="LabelControl3.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
   </data>
   <data name="LabelControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 91</value>
+    <value>65, 79</value>
   </data>
   <data name="LabelControl3.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -460,13 +469,13 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="LabelControl2.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
   </data>
   <data name="LabelControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 54</value>
+    <value>67, 49</value>
   </data>
   <data name="LabelControl2.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -490,7 +499,7 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="LabelControl1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 9.75pt, style=Bold</value>
@@ -520,10 +529,10 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;LabelControl1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="CboSexo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 363</value>
+    <value>128, 332</value>
   </data>
   <assembly alias="DevExpress.Utils.v16.1" name="DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="CboSexo.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
@@ -569,10 +578,10 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;CboSexo.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="SimpleButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 296</value>
+    <value>337, 265</value>
   </data>
   <data name="SimpleButton3.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -596,10 +605,10 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;SimpleButton3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="CboEstadoCivil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 329</value>
+    <value>128, 298</value>
   </data>
   <data name="CboEstadoCivil.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
     <value>Combo</value>
@@ -635,10 +644,10 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;CboEstadoCivil.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="CboMunicipio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 298</value>
+    <value>128, 267</value>
   </data>
   <data name="CboMunicipio.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
     <value>Combo</value>
@@ -689,10 +698,10 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;CboMunicipio.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="TxtCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 220</value>
+    <value>128, 204</value>
   </data>
   <data name="TxtCorreo.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -713,10 +722,10 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;TxtCorreo.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="TxtTelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 189</value>
+    <value>128, 173</value>
   </data>
   <data name="TxtTelefono.Properties.Mask.EditMask" xml:space="preserve">
     <value>\d\d?\d?\d?-\d?\d?\d?\d?</value>
@@ -747,10 +756,10 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;TxtTelefono.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="TxtDireccion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 130</value>
+    <value>128, 110</value>
   </data>
   <data name="TxtDireccion.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -771,10 +780,10 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;TxtDireccion.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="TxtApellidos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 91</value>
+    <value>128, 79</value>
   </data>
   <data name="TxtApellidos.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -795,10 +804,10 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;TxtApellidos.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="TxtNombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 55</value>
+    <value>128, 50</value>
   </data>
   <data name="TxtNombre.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -819,13 +828,13 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;TxtNombre.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="TxtFecha.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="TxtFecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 258</value>
+    <value>128, 235</value>
   </data>
   <data name="TxtFecha.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
     <value>Combo</value>
@@ -852,7 +861,7 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;TxtFecha.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="TxtIdCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 25</value>
@@ -885,7 +894,7 @@
     <value>GbCliente</value>
   </data>
   <data name="&gt;&gt;TxtIdCliente.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="GCPrincipal.Location" type="System.Drawing.Point, System.Drawing">
     <value>499, 24</value>
@@ -1104,6 +1113,12 @@
   <data name="ColEstadoCivil.Width" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
+  <data name="resource.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Blue</value>
+  </data>
+  <data name="resource.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
   <data name="GCPrincipal.Size" type="System.Drawing.Size, System.Drawing">
     <value>836, 442</value>
   </data>
@@ -1120,7 +1135,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GCPrincipal.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="SimpleButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1186,7 +1201,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SimpleButton5.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="BtnBusquedaMunicipio.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1253,7 +1268,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnBusquedaMunicipio.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="SimpleButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1319,7 +1334,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SimpleButton2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="SimpleButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1387,7 +1402,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SimpleButton1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="BtnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1690,7 +1705,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnInsertar.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>13</value>
   </data>
   <data name="BtnActualizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1766,7 +1781,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnActualizar.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>14</value>
+  </data>
+  <data name="CheckCredito.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 358</value>
+  </data>
+  <data name="CheckCredito.Properties.Caption" xml:space="preserve">
+    <value>Crédito</value>
+  </data>
+  <data name="CheckCredito.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 19</value>
+  </data>
+  <data name="CheckCredito.TabIndex" type="System.Int32, mscorlib">
+    <value>173</value>
+  </data>
+  <data name="&gt;&gt;CheckCredito.Name" xml:space="preserve">
+    <value>CheckCredito</value>
+  </data>
+  <data name="&gt;&gt;CheckCredito.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CheckCredito.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;CheckCredito.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="GbCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 72</value>
@@ -4969,6 +5008,12 @@ e7dac44018a8a27d86ec9a6bb4304f246e76fc7cc0669c8a145707e39ed54a486972068875bd0dfd
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cliente</value>
+  </data>
+  <data name="&gt;&gt;ColTieneCredito.Name" xml:space="preserve">
+    <value>ColTieneCredito</value>
+  </data>
+  <data name="&gt;&gt;ColTieneCredito.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
     <value>ToolTip1</value>
