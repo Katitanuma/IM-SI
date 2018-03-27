@@ -123,13 +123,15 @@
   <metadata name="ReporteVentaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
-  <metadata name="Sp_ReporteVentasFechaTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="Sp_ReporteClienteMasCompraTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 95</value>
   </metadata>
   <data name="XrLabel9.Text" xml:space="preserve">
-    <value>AUTO FRENOS COMAYAGÜELA, S. de R.L.                       
-TODO EN FRENOS, CABLES Y VENTA DE REPUESTOS EN GENERAL
-R.T.N. 08019995225516,  E-mail: lucyleiby97@yahoo.es                               
+    <value>
+Lomas de Toncontín, 3ra etapa 
+Calle principal el paso del pastillo            Blooque #19, contiguo al puente desnivel
+Tel.: 2234-8448, Honduras, C.A.      
+                                       
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -1828,7 +1830,11 @@ R.T.N. 08019995225516,  E-mail: lucyleiby97@yahoo.es
         FFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf//Z
 </value>
   </data>
-  <metadata name="CachedReporteVenta1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
-  </metadata>
+  <data name="XrLabel7.Text" xml:space="preserve">
+    <value>          	         AUTO FRENOS COMAYAGÜELA, S. de R.L.    
+      TODO EN FRENOS, CABLES Y VENTA DE REPUESTOS EN GENERAL 
+	R.T.N. 08019995225516,  E-mail: lucyleiby97@yahoo.es                                                 
+                                               
+    </value>
+  </data>
 </root>
