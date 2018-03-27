@@ -70,8 +70,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MARCIOMARTINEZ;Initial Catalog=INNOVAMASTERBD;User ID=sa;Password=123"& _ 
-            "")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=INNOVAMASTERBD;User ID=sa;Password=123")>  _
         Public ReadOnly Property Conect() As String
             Get
                 Return CType(Me("Conect"),String)

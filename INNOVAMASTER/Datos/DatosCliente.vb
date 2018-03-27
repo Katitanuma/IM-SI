@@ -2,6 +2,7 @@
     Dim IdCliente, NombreCliente, ApellidoCliente, DireccionCliente, TelefonoCliente, CorreoCliente As String
     Dim FechaNacimiento As Date
     Dim IdSexo, IdMunicipio, IdEstadoCivil As Integer
+    Dim TieneCredito As Boolean
 
     Public Property gIdCliente
         Get
@@ -94,10 +95,21 @@
         End Set
     End Property
 
+    Public Property gTieneCredito As Boolean
+        Get
+            Return TieneCredito
+        End Get
+        Set(value As Boolean)
+            TieneCredito = value
+        End Set
+    End Property
+
+
+
     Public Sub New()
 
     End Sub
-    Public Sub New(ByVal IdCliente As String, ByVal NombreCliente As String, ByVal ApellidoCliente As String, ByVal DireccionCliente As String, ByVal TelefonoCliente As String, ByVal CorreoCliente As String, ByVal FechaNacimiento As Date, ByVal IdSexo As Integer, ByVal IdMunicipio As Integer, ByVal IdEstadoCivil As Integer)
+    Public Sub New(ByVal IdCliente As String, ByVal NombreCliente As String, ByVal ApellidoCliente As String, ByVal DireccionCliente As String, ByVal TelefonoCliente As String, ByVal CorreoCliente As String, ByVal FechaNacimiento As Date, ByVal IdSexo As Integer, ByVal IdMunicipio As Integer, ByVal IdEstadoCivil As Integer, ByVal TieneCredito As Boolean)
         gIdCliente = IdCliente
         gNombreCliente = NombreCliente
         gApellidoCliente = ApellidoCliente
@@ -107,7 +119,8 @@
         gFechaNacimiento = FechaNacimiento
         gIdSexo = IdSexo
         gIdMunicipio = IdMunicipio
-        gIdEstadoCivil = gIdEstadoCivil
+        gIdEstadoCivil = IdEstadoCivil
+        gTieneCredito = TieneCredito
 
     End Sub
 

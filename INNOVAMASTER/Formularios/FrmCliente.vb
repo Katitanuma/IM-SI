@@ -164,6 +164,7 @@ Public Class BtnBuesquedaEC
                 datos.gIdSexo = CInt(CboSexo.EditValue)
                 datos.gIdMunicipio = CInt(CboMunicipio.EditValue)
                 datos.gIdEstadoCivil = CInt(CboEstadoCivil.EditValue)
+                datos.gTieneCredito = CheckCredito.Checked
 
 
                 If funcion.InsertarCliente(datos) Then
@@ -186,7 +187,8 @@ Public Class BtnBuesquedaEC
         GbCliente.Enabled = False
         BtnInsertar.Visible = False
         BtnNuevo.Visible = True
-        BtnEditar.Visible = False
+        BtnEditar.Visible = True
+
         BtnNuevo.Visible = True
         BtnCancelar.Visible = False
         GCPrincipal.Enabled = True
@@ -200,13 +202,15 @@ Public Class BtnBuesquedaEC
         CboMunicipio.EditValue = Nothing
         CboEstadoCivil.EditValue = Nothing
         CboSexo.EditValue = Nothing
+        BtnActualizar.Visible = False
     End Sub
     Private Sub BtnNuevoEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         If TxtNombre.EditValue <> Nothing Then
             GbCliente.Enabled = True
             BtnNuevo.Visible = False
             BtnInsertar.Visible = False
-            BtnEditar.Visible = True
+            BtnActualizar.Visible = True
+            BtnEditar.Visible = False
             BtnNuevo.Visible = False
             BtnCancelar.Visible = True
             GCPrincipal.Enabled = False
@@ -249,6 +253,7 @@ Public Class BtnBuesquedaEC
                 datos.gIdSexo = CInt(CboSexo.EditValue)
                 datos.gIdMunicipio = CInt(CboMunicipio.EditValue)
                 datos.gIdEstadoCivil = CInt(CboEstadoCivil.EditValue)
+                datos.gTieneCredito = CheckCredito.Checked
                 If funcion.EditarCliente(datos) Then
                     XtraMessageBox.Show("Cliente actualizado con Éxito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Limpiar()
@@ -290,6 +295,7 @@ Public Class BtnBuesquedaEC
         CboEstadoCivil.Text = DgvClientes.GetRowCellValue(DgvClientes.FocusedRowHandle, ColEstadoCivil)
         CboSexo.Text = DgvClientes.GetRowCellValue(DgvClientes.FocusedRowHandle, ColSexo)
         TxtFecha.EditValue = DgvClientes.GetRowCellValue(DgvClientes.FocusedRowHandle, ColFechaNacimiento)
+        CheckCredito.Checked = DgvClientes.GetRowCellValue(DgvClientes.FocusedRowHandle, ColTieneCredito)
 
 
         Try
@@ -335,6 +341,8 @@ Public Class BtnBuesquedaEC
         CboEstadoCivil.Text = DgvClientes.GetRowCellValue(DgvClientes.FocusedRowHandle, ColEstadoCivil)
         CboSexo.Text = DgvClientes.GetRowCellValue(DgvClientes.FocusedRowHandle, ColSexo)
         TxtFecha.EditValue = DgvClientes.GetRowCellValue(DgvClientes.FocusedRowHandle, ColFechaNacimiento)
+        CheckCredito.Checked = DgvClientes.GetRowCellValue(DgvClientes.FocusedRowHandle, ColTieneCredito)
+
 
 
         Try

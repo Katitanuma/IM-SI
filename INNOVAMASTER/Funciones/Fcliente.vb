@@ -19,6 +19,7 @@ Public Class Fcliente
             cmd.Parameters.AddWithValue("@IdSexo", Datos.gIdSexo)
             cmd.Parameters.AddWithValue("@IdMunicipio", Datos.gIdMunicipio)
             cmd.Parameters.AddWithValue("@IdEstadoCivil", Datos.gIdEstadoCivil)
+            cmd.Parameters.AddWithValue("@TieneCredito", Datos.gTieneCredito)
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -56,6 +57,7 @@ Public Class Fcliente
             cmd.Parameters.AddWithValue("@IdSexo", Datos.gIdSexo)
             cmd.Parameters.AddWithValue("@IdMunicipio", Datos.gIdMunicipio)
             cmd.Parameters.AddWithValue("@IdEstadoCivil", Datos.gIdEstadoCivil)
+            cmd.Parameters.AddWithValue("@TieneCredito", Datos.gTieneCredito)
 
             If cmd.ExecuteNonQuery Then
                 Return True

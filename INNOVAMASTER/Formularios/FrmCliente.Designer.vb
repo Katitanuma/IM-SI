@@ -24,6 +24,9 @@ Partial Class BtnBuesquedaEC
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BtnBuesquedaEC))
+        Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleValue1 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
+        Me.ColTieneCredito = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -71,6 +74,7 @@ Partial Class BtnBuesquedaEC
         Me.BtnInsertar = New DevExpress.XtraEditors.SimpleButton()
         Me.BtnActualizar = New DevExpress.XtraEditors.SimpleButton()
         Me.GbCliente = New DevExpress.XtraEditors.GroupControl()
+        Me.CheckCredito = New DevExpress.XtraEditors.CheckEdit()
         Me.LabelControl11 = New DevExpress.XtraEditors.LabelControl()
         Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
         Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
@@ -90,8 +94,15 @@ Partial Class BtnBuesquedaEC
         CType(Me.DgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GbCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbCliente.SuspendLayout()
+        CType(Me.CheckCredito.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ColTieneCredito
+        '
+        resources.ApplyResources(Me.ColTieneCredito, "ColTieneCredito")
+        Me.ColTieneCredito.FieldName = "TieneCredito"
+        Me.ColTieneCredito.Name = "ColTieneCredito"
         '
         'Label11
         '
@@ -321,7 +332,18 @@ Partial Class BtnBuesquedaEC
         Me.DgvClientes.Appearance.VertLine.BackColor = CType(resources.GetObject("DgvClientes.Appearance.VertLine.BackColor"), System.Drawing.Color)
         Me.DgvClientes.Appearance.VertLine.Options.UseBackColor = True
         Me.DgvClientes.ColumnPanelRowHeight = 26
-        Me.DgvClientes.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.ColIdCliente, Me.ColNombreCompleto, Me.ColDireccion, Me.ColTelefono, Me.ColCorreo, Me.ColFechaNacimiento, Me.ColSexo, Me.ColMunicipio, Me.ColEstadoCivil})
+        Me.DgvClientes.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.ColIdCliente, Me.ColNombreCompleto, Me.ColDireccion, Me.ColTelefono, Me.ColCorreo, Me.ColFechaNacimiento, Me.ColSexo, Me.ColMunicipio, Me.ColEstadoCivil, Me.ColTieneCredito})
+        GridFormatRule1.ApplyToRow = True
+        GridFormatRule1.Column = Me.ColTieneCredito
+        GridFormatRule1.Name = "Format0"
+        FormatConditionRuleValue1.Appearance.BackColor = CType(resources.GetObject("resource.BackColor"), System.Drawing.Color)
+        FormatConditionRuleValue1.Appearance.ForeColor = CType(resources.GetObject("resource.ForeColor"), System.Drawing.Color)
+        FormatConditionRuleValue1.Appearance.Options.UseBackColor = True
+        FormatConditionRuleValue1.Appearance.Options.UseForeColor = True
+        FormatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal
+        FormatConditionRuleValue1.Value1 = True
+        GridFormatRule1.Rule = FormatConditionRuleValue1
+        Me.DgvClientes.FormatRules.Add(GridFormatRule1)
         Me.DgvClientes.GridControl = Me.GCPrincipal
         Me.DgvClientes.Name = "DgvClientes"
         Me.DgvClientes.OptionsBehavior.AllowIncrementalSearch = True
@@ -509,6 +531,7 @@ Partial Class BtnBuesquedaEC
         '
         'GbCliente
         '
+        Me.GbCliente.Controls.Add(Me.CheckCredito)
         Me.GbCliente.Controls.Add(Me.LabelControl10)
         Me.GbCliente.Controls.Add(Me.LabelControl9)
         Me.GbCliente.Controls.Add(Me.LabelControl8)
@@ -532,6 +555,12 @@ Partial Class BtnBuesquedaEC
         Me.GbCliente.Controls.Add(Me.TxtIdCliente)
         resources.ApplyResources(Me.GbCliente, "GbCliente")
         Me.GbCliente.Name = "GbCliente"
+        '
+        'CheckCredito
+        '
+        resources.ApplyResources(Me.CheckCredito, "CheckCredito")
+        Me.CheckCredito.Name = "CheckCredito"
+        Me.CheckCredito.Properties.Caption = resources.GetString("CheckCredito.Properties.Caption")
         '
         'LabelControl11
         '
@@ -561,8 +590,6 @@ Partial Class BtnBuesquedaEC
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnEditar)
         Me.Controls.Add(Me.BtnNuevo)
-        Me.Controls.Add(Me.BtnInsertar)
-        Me.Controls.Add(Me.BtnActualizar)
         Me.Controls.Add(Me.SimpleButton5)
         Me.Controls.Add(Me.BtnBusquedaMunicipio)
         Me.Controls.Add(Me.SimpleButton2)
@@ -571,6 +598,8 @@ Partial Class BtnBuesquedaEC
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.LblRelacionClienteVenta)
+        Me.Controls.Add(Me.BtnInsertar)
+        Me.Controls.Add(Me.BtnActualizar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.HelpButton = True
         Me.HelpProvider1.SetHelpNavigator(Me, CType(resources.GetObject("$this.HelpNavigator"), System.Windows.Forms.HelpNavigator))
@@ -594,6 +623,7 @@ Partial Class BtnBuesquedaEC
         CType(Me.GbCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GbCliente.ResumeLayout(False)
         Me.GbCliente.PerformLayout()
+        CType(Me.CheckCredito.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -649,4 +679,6 @@ Partial Class BtnBuesquedaEC
     Friend WithEvents LabelControl11 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents PrintingSystem1 As DevExpress.XtraPrinting.PrintingSystem
     Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
+    Friend WithEvents ColTieneCredito As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents CheckCredito As DevExpress.XtraEditors.CheckEdit
 End Class
