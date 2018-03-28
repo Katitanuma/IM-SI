@@ -30,10 +30,13 @@ Partial Class ReportePedido
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.GCPrincipal = New DevExpress.XtraGrid.GridControl()
         Me.DgvPrincipal = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
+        Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsReportePedidos.SuspendLayout()
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnExportarPDF
@@ -58,7 +61,7 @@ Partial Class ReportePedido
         Me.LblEtiqueta.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LblEtiqueta.Appearance.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.LblEtiqueta.Location = New System.Drawing.Point(345, 12)
-        Me.LblEtiqueta.Size = New System.Drawing.Size(240, 43)
+        Me.LblEtiqueta.Size = New System.Drawing.Size(239, 43)
         Me.LblEtiqueta.Text = "Reporte de Pedido"
         '
         'CmsReportePedidos
@@ -137,6 +140,17 @@ Partial Class ReportePedido
         Me.DgvPrincipal.OptionsView.ShowGroupPanel = False
         Me.DgvPrincipal.RowHeight = 22
         '
+        'PrintingSystem1
+        '
+        Me.PrintingSystem1.Links.AddRange(New Object() {Me.PrintableComponentLink1})
+        '
+        'PrintableComponentLink1
+        '
+        Me.PrintableComponentLink1.Component = Me.GCPrincipal
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
+        '
         'ReportePedido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -164,6 +178,7 @@ Partial Class ReportePedido
         Me.CmsReportePedidos.ResumeLayout(False)
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvPrincipal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -174,4 +189,6 @@ Partial Class ReportePedido
     Friend WithEvents HelpProvider1 As HelpProvider
     Friend WithEvents GCPrincipal As DevExpress.XtraGrid.GridControl
     Friend WithEvents DgvPrincipal As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents PrintingSystem1 As DevExpress.XtraPrinting.PrintingSystem
+    Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
 End Class

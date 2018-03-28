@@ -192,7 +192,7 @@ Public Class FrmMarca
     End Sub
 
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
-        Exportar_a_PDF(GCPrincipal, Me.Text)
+        Exportar_a_PDF(PrintableComponentLink1, Me.Text)
     End Sub
 
     Private Sub SimpleButton5_Click(sender As Object, e As EventArgs) Handles SimpleButton5.Click

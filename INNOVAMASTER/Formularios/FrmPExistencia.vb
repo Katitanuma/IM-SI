@@ -30,7 +30,7 @@ Public Class FrmPExistencia
     End Sub
 
     Private Sub BtnExportarPDF_Click(sender As Object, e As EventArgs) Handles BtnExportarPDF.Click
-        Exportar_a_PDF(GCPrincipal, Me.Text)
+        Exportar_a_PDF(PrintableComponentLink1, Me.Text)
     End Sub
 
     Private Sub BtnExportarExcel_Click(sender As Object, e As EventArgs) Handles BtnExportarExcel.Click

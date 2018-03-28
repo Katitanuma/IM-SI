@@ -2,6 +2,7 @@
 Imports DevExpress.XtraReports.UI
 Imports System.Text
 Imports System.Security.Cryptography
+Imports DevExpress.XtraPrinting
 
 Module ModuloBloques
     Public Tema As String
@@ -29,8 +30,7 @@ Module ModuloBloques
             MessageBox.Show(Ex.Message)
         End Try
     End Sub
-
-    Public Sub Exportar_a_PDF(ByRef Grilla As DevExpress.XtraGrid.GridControl, ByVal Nombre As String)
+    Public Sub Exportar_a_PDF(ByRef Grilla As PrintableComponentLink, ByVal Nombre As String)
         Dim Archivo As New SaveFileDialog
 
         Try
@@ -53,6 +53,28 @@ Module ModuloBloques
         End Try
     End Sub
 
+    Public Sub Exportar_a_PDF2(ByRef Grilla As DevExpress.XtraGrid.GridControl, ByVal Nombre As String)
+        Dim Archivo As New SaveFileDialog
+
+        Try
+            Archivo.Filter = "pdf|*.pdf"
+            Archivo.FileName = Nombre
+            Archivo.ShowDialog()
+            If Archivo.FileName.Length > 0 Then
+
+                Grilla.ExportToPdf(Archivo.FileName)
+
+                ' Lanzar el archivo
+                Process.Start(Archivo.FileName)
+
+            End If
+
+        Catch Ex As Exception
+            Dim _st As New System.Diagnostics.StackTrace()
+            Dim _miFuncion As String = _st.GetFrame(0).GetMethod().Name
+            XtraMessageBox.Show(Ex.Message)
+        End Try
+    End Sub
 
     Public Function Encriptar(ByVal Input As String) As String
 

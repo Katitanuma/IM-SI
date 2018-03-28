@@ -124,16 +124,16 @@ Partial Class FrmMenuPrincipal
         Me.RibbonControl.ApplicationButtonDropDownControl = Me.ApplicationMenu1
         Me.RibbonControl.ApplicationIcon = Global.INNOVAMASTER.My.Resources.Resources.Logo_BUeno
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-<<<<<<< HEAD
+
         Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45})
 
         Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem11})
 
 
         Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem11, Me.BarButtonItem20, Me.BarButtonItem5, Me.BarButtonItem15, Me.BarButtonItem46})
-=======
+
         Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem29, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem11, Me.BarButtonItem20, Me.BarButtonItem5, Me.BarButtonItem15, Me.BarButtonItem46, Me.BarButtonItem48, Me.BarButtonItem49})
->>>>>>> 7720894615bc1637bf5c8aa2a1c454dce9a4f6c2
+
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.MaxItemId = 12
         Me.RibbonControl.Name = "RibbonControl"

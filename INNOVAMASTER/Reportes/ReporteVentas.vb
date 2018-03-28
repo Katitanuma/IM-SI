@@ -78,7 +78,7 @@ Public Class ReporteVentas
         Exportar_a_Excel(GCPrincipal, Me.Text)
     End Sub
     Protected Overrides Sub ExportarPDF()
-        Exportar_a_PDF(GCPrincipal, Me.Text)
+        Exportar_a_PDF(PrintableComponentLink1, Me.Text)
     End Sub
     Protected Overrides Sub ActualizarDatos()
         Using cmd As New SqlCommand

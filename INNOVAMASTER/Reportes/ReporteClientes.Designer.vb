@@ -22,17 +22,21 @@ Partial Class ReporteClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteClientes))
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GCPrincipal = New DevExpress.XtraGrid.GridControl()
         Me.DgvPrincipal = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
+        Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnExportarPDF
@@ -138,6 +142,17 @@ Partial Class ReporteClientes
         Me.GridView2.GridControl = Me.GCPrincipal
         Me.GridView2.Name = "GridView2"
         '
+        'PrintingSystem1
+        '
+        Me.PrintingSystem1.Links.AddRange(New Object() {Me.PrintableComponentLink1})
+        '
+        'PrintableComponentLink1
+        '
+        Me.PrintableComponentLink1.Component = Me.GCPrincipal
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
+        '
         'ReporteClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -165,6 +180,7 @@ Partial Class ReporteClientes
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvPrincipal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -174,4 +190,6 @@ Partial Class ReporteClientes
     Friend WithEvents GCPrincipal As DevExpress.XtraGrid.GridControl
     Friend WithEvents DgvPrincipal As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridView2 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents PrintingSystem1 As DevExpress.XtraPrinting.PrintingSystem
+    Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
 End Class
