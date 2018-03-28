@@ -53,6 +53,8 @@ Partial Class FrmProducto
         Me.BtnInsertar = New DevExpress.XtraEditors.SimpleButton()
         Me.BtnActualizar = New DevExpress.XtraEditors.SimpleButton()
         Me.GbProducto = New DevExpress.XtraEditors.GroupControl()
+        Me.BtnBusquedaModelo = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnBusquedaCategoria = New DevExpress.XtraEditors.SimpleButton()
         Me.BtnCodigoProveedor = New DevExpress.XtraEditors.SimpleButton()
         Me.ChkGravado = New DevExpress.XtraEditors.CheckEdit()
         Me.TxtPrecioMayorista = New DevExpress.XtraEditors.CalcEdit()
@@ -85,8 +87,6 @@ Partial Class FrmProducto
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PrintingSystem1 = New DevExpress.XtraPrinting.PrintingSystem(Me.components)
         Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
-        Me.BtnBusquedaCategoria = New DevExpress.XtraEditors.SimpleButton()
-        Me.BtnBusquedaModelo = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GCPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -379,7 +379,7 @@ Partial Class FrmProducto
         Me.HelpProvider1.SetShowHelp(Me.SimpleButton4, True)
         Me.SimpleButton4.Size = New System.Drawing.Size(165, 45)
         Me.SimpleButton4.TabIndex = 137
-        Me.SimpleButton4.Text = "Exportar PDF"
+        Me.SimpleButton4.Text = "E"
         '
         'SimpleButton2
         '
@@ -493,6 +493,22 @@ Partial Class FrmProducto
         Me.GbProducto.Size = New System.Drawing.Size(468, 388)
         Me.GbProducto.TabIndex = 145
         Me.GbProducto.Text = "Datos Producto"
+        '
+        'BtnBusquedaModelo
+        '
+        Me.BtnBusquedaModelo.Location = New System.Drawing.Point(380, 319)
+        Me.BtnBusquedaModelo.Name = "BtnBusquedaModelo"
+        Me.BtnBusquedaModelo.Size = New System.Drawing.Size(29, 23)
+        Me.BtnBusquedaModelo.TabIndex = 188
+        Me.BtnBusquedaModelo.Text = "..."
+        '
+        'BtnBusquedaCategoria
+        '
+        Me.BtnBusquedaCategoria.Location = New System.Drawing.Point(380, 281)
+        Me.BtnBusquedaCategoria.Name = "BtnBusquedaCategoria"
+        Me.BtnBusquedaCategoria.Size = New System.Drawing.Size(29, 23)
+        Me.BtnBusquedaCategoria.TabIndex = 187
+        Me.BtnBusquedaCategoria.Text = "..."
         '
         'BtnCodigoProveedor
         '
@@ -853,22 +869,6 @@ Partial Class FrmProducto
         Me.PrintableComponentLink1.PageHeaderFooter = New DevExpress.XtraPrinting.PageHeaderFooter(Nothing, New DevExpress.XtraPrinting.PageFooterArea(New String() {"INNOVAMASTER: [User Name]", "[Date Printed] [Time Printed]", "[Page # of Pages #]"}, New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Center))
         Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
         Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
-        '
-        'BtnBusquedaCategoria
-        '
-        Me.BtnBusquedaCategoria.Location = New System.Drawing.Point(380, 281)
-        Me.BtnBusquedaCategoria.Name = "BtnBusquedaCategoria"
-        Me.BtnBusquedaCategoria.Size = New System.Drawing.Size(29, 23)
-        Me.BtnBusquedaCategoria.TabIndex = 187
-        Me.BtnBusquedaCategoria.Text = "..."
-        '
-        'BtnBusquedaModelo
-        '
-        Me.BtnBusquedaModelo.Location = New System.Drawing.Point(380, 319)
-        Me.BtnBusquedaModelo.Name = "BtnBusquedaModelo"
-        Me.BtnBusquedaModelo.Size = New System.Drawing.Size(29, 23)
-        Me.BtnBusquedaModelo.TabIndex = 188
-        Me.BtnBusquedaModelo.Text = "..."
         '
         'FrmProducto
         '

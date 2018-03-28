@@ -23,6 +23,7 @@ Partial Class FrmLogin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.BtnConfiguracion = New System.Windows.Forms.Button()
         Me.ChkVer = New System.Windows.Forms.CheckBox()
@@ -91,7 +92,6 @@ Partial Class FrmLogin
         Me.TxtContrasena.Name = "TxtContrasena"
         Me.TxtContrasena.Size = New System.Drawing.Size(176, 19)
         Me.TxtContrasena.TabIndex = 2
-        Me.TxtContrasena.Text = "hola"
         Me.TxtContrasena.UseSystemPasswordChar = True
         '
         'TxtUsuario
@@ -102,7 +102,6 @@ Partial Class FrmLogin
         Me.TxtUsuario.Name = "TxtUsuario"
         Me.TxtUsuario.Size = New System.Drawing.Size(176, 19)
         Me.TxtUsuario.TabIndex = 1
-        Me.TxtUsuario.Text = "MarcioM98"
         '
         'FrmLogin
         '
@@ -122,6 +121,7 @@ Partial Class FrmLogin
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.HelpButton = True
         Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmLogin"
         Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

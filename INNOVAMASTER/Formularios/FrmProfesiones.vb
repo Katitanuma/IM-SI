@@ -147,7 +147,7 @@ Public Class FrmProfesiones
                 datos.gidprofesion = TxtIdProfesion.Text
 
                 If funcion.Actualizar(datos) Then
-                    XtraMessageBox.Show("Profesion Insertada con éxito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    XtraMessageBox.Show("Profesion modificada con éxito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                     GbDatos.Enabled = False
                     TxtIdProfesion.EditValue = Nothing

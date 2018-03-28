@@ -877,7 +877,7 @@ Partial Class FrmEmpleado
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.LabelControl1.Location = New System.Drawing.Point(73, 10)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(262, 43)
+        Me.LabelControl1.Size = New System.Drawing.Size(263, 43)
         Me.LabelControl1.TabIndex = 160
         Me.LabelControl1.Text = "Perfil del Empleado"
         '
@@ -889,8 +889,7 @@ Partial Class FrmEmpleado
         '
         Me.PrintableComponentLink1.Component = Me.GCPrincipal
         Me.PrintableComponentLink1.Landscape = True
-        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(20, 20, 20, 38)
-        Me.PrintableComponentLink1.PageHeaderFooter = New DevExpress.XtraPrinting.PageHeaderFooter(New DevExpress.XtraPrinting.PageHeaderArea(New String(-1) {}, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Center), New DevExpress.XtraPrinting.PageFooterArea(New String() {"INNOVAMASTER: [User Name]", "[Date Printed] [Time Printed]", "[Page # of Pages #]"}, New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Center))
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
         Me.PrintableComponentLink1.PaperKind = System.Drawing.Printing.PaperKind.Legal
         Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
         Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")

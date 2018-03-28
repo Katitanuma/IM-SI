@@ -50,6 +50,7 @@ Public Class FrmLogin
         HelpProvider1.SetHelpKeyword(Me, "Inicio de Sesión")
         Me.Focus()
         FrmMenuPrincipal.Close()
+
     End Sub
 
 
@@ -259,6 +260,8 @@ Public Class FrmLogin
                 End If
                 If dr.GetValue(2).ToString = "REPORTES" Then
                     FrmMenuPrincipal.RibbonPageGroupReportes.Enabled = False
+                    FrmMenuPrincipal.RibbonPageGroup1.Enabled = False
+
                 End If
 
             End While
@@ -317,6 +320,7 @@ Public Class FrmLogin
                 End If
                 If dr.GetValue(2).ToString = "REPORTES" Then
                     FrmMenuPrincipal.RibbonPageGroupReportes.Enabled = True
+                    FrmMenuPrincipal.RibbonPageGroup1.Enabled = True
                 End If
 
             End While

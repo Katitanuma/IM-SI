@@ -352,6 +352,7 @@ Public Class FrmMenuPrincipal
                 End If
                 If dr.GetValue(2).ToString = "REPORTES" Then
                     RibbonPageGroupReportes.Enabled = False
+                    RibbonPageGroup1.Enabled = False
 
                 End If
                 If dr.GetValue(2).ToString = "PROVEEDORES" Then
@@ -423,11 +424,11 @@ Public Class FrmMenuPrincipal
                 End If
                 If dr.GetValue(2).ToString = "REPORTES" Then
                     RibbonPageGroupReportes.Enabled = True
+                    RibbonPageGroup1.Enabled = True
 
                 End If
                 If dr.GetValue(2).ToString = "PROVEEDORES" Then
                     RibbonPageGroupProveedores.Enabled = True
-
                 End If
                 If dr.GetValue(2).ToString = "UBICACIÓN" Then
                     RibbonGroupUbucacion.Enabled = True

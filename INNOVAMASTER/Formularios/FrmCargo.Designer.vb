@@ -266,7 +266,7 @@ Partial Class frmCargo
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.LabelControl3.Location = New System.Drawing.Point(90, 30)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(264, 43)
+        Me.LabelControl3.Size = New System.Drawing.Size(265, 43)
         Me.LabelControl3.TabIndex = 147
         Me.LabelControl3.Text = "Cargo del Empleado"
         '
@@ -313,8 +313,7 @@ Partial Class frmCargo
         'PrintableComponentLink1
         '
         Me.PrintableComponentLink1.Component = Me.GCPrincipal
-        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 44)
-        Me.PrintableComponentLink1.PageHeaderFooter = New DevExpress.XtraPrinting.PageHeaderFooter(New DevExpress.XtraPrinting.PageHeaderArea(New String(-1) {}, New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Near), New DevExpress.XtraPrinting.PageFooterArea(New String() {"INNOVAMASTER:[User Name]", "[Date Printed]  [Time Printed]", "[Page # of Pages #]"}, New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), DevExpress.XtraPrinting.BrickAlignment.Near))
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
         Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
         Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
         '

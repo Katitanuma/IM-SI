@@ -9,6 +9,7 @@ Public Class FrmProducto
     Private Sub FrmProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         MostrarProducto()
+
         Focus()
         LlenarCombos()
         LlenarCombos2()
@@ -299,7 +300,7 @@ Public Class FrmProducto
                 datos.gIdModelo = CInt(CboModelo.EditValue)
 
 
-
+                'ESP'
 
                 If funcion.Editar(datos) Then
                     XtraMessageBox.Show("Producto Editado Con éxito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -323,6 +324,7 @@ Public Class FrmProducto
                     MostrarProducto()
                     PbProducto.Image = Nothing
                     BtnCodigoProveedor.Visible = False
+                    BtnActualizar.Visible = False
                 End If
 
             Catch ex As Exception

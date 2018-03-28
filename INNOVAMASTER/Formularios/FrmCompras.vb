@@ -396,6 +396,36 @@ Public Class FrmCompras
             TxtDescuentoExtra.Text = 0
         End If
     End Sub
+    Private Function GuardarPedido() As String
+        Dim estado As String
+        Conec.Conectarse()
+        Using cmd As New SqlCommand
+            Try
+                With cmd
+                    .CommandText = "InsertarPedido2"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = Conec.Con
+                    .Parameters.Add("@IdUsuario", SqlDbType.Int).Value = CInt(FrmMenuPrincipal.LblIdUsuario.Text)
+                    .Parameters.Add("@IdProveedor", SqlDbType.VarChar, 15).Value = "0000-0000-00000"
+                    .Parameters.Add("@Fecha", SqlDbType.Date).Value = TxtFechaCompra.Text
+
+                    Dim dr As SqlDataReader = .ExecuteReader()
+
+                    If dr.Read Then
+                        estado = dr(0).ToString
+                    Else
+                        estado = ""
+                    End If
+                End With
+
+
+            Catch ex As Exception
+                XtraMessageBox.Show(ex.Message)
+                estado = ""
+            End Try
+        End Using
+        Return estado
+    End Function
 
 
 
@@ -568,9 +598,20 @@ Public Class FrmCompras
 
     Private Function GuardarCompra() As Boolean
         Dim estado As Boolean
-        If TxtTotal.Text = Nothing Then
+        If TxtTotal.EditValue = Nothing Then
             estado = False
         Else
+            Dim IdPedido As String
+            If CboPedido.EditValue <> Nothing Then
+                IdPedido = CboPedido.EditValue.ToString
+            Else
+                IdPedido = GuardarPedido()
+                If IdPedido = "" Then
+                    Return False
+                End If
+            End If
+
+
             Conec.Conectarse()
 
             Using cmd As New SqlCommand
@@ -583,6 +624,7 @@ Public Class FrmCompras
                         .Parameters.Add("@IdUsuario", SqlDbType.Int).Value = CInt(FrmMenuPrincipal.LblIdUsuario.Text)
                         .Parameters.Add("@FechaCompra", SqlDbType.Date).Value = TxtFechaCompra.Text
                         .Parameters.Add("@NumeroFactura", SqlDbType.NVarChar, 50).Value = TxtNumeroFactura.Text.ToString
+                        .Parameters.Add("@IdPedido", SqlDbType.Int).Value = CInt(IdPedido)
                         .ExecuteNonQuery()
                     End With
                     estado = True

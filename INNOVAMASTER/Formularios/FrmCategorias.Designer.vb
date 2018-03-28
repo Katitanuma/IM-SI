@@ -301,7 +301,7 @@ Partial Class FrmCategoria
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.LabelControl3.Location = New System.Drawing.Point(99, 34)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(302, 43)
+        Me.LabelControl3.Size = New System.Drawing.Size(303, 43)
         Me.LabelControl3.TabIndex = 150
         Me.LabelControl3.Text = "Categoría del Producto"
         '
