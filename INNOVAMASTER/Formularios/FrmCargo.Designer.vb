@@ -266,7 +266,7 @@ Partial Class frmCargo
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.LabelControl3.Location = New System.Drawing.Point(90, 30)
         Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(265, 43)
+        Me.LabelControl3.Size = New System.Drawing.Size(264, 43)
         Me.LabelControl3.TabIndex = 147
         Me.LabelControl3.Text = "Cargo del Empleado"
         '

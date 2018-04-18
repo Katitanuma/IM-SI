@@ -20,12 +20,17 @@ Partial Class FrmGraficosVentas
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Series4 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim PieSeriesView3 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
-        Dim Series5 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim PieSeriesView4 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
-        Dim XyDiagram2 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
-        Dim Series6 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim PieSeriesView1 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
+        Dim SeriesTitle1 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
+        Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim PieSeriesView2 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
+        Dim ChartTitle1 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
+        Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim Series3 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SideBySideBarSeriesLabel1 As DevExpress.XtraCharts.SideBySideBarSeriesLabel = New DevExpress.XtraCharts.SideBySideBarSeriesLabel()
+        Dim SideBySideBarSeriesView1 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
+        Dim ChartTitle2 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmGraficosVentas))
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -55,21 +60,28 @@ Partial Class FrmGraficosVentas
         Me.PrintableComponentLink1 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         Me.PrintableComponentLink2 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         Me.PrintableComponentLink3 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
+        Me.PrintableComponentLink4 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
+        Me.PrintableComponentLink5 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
+        Me.PrintableComponentLink6 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
+        Me.PrintableComponentLink7 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
+        Me.PrintableComponentLink8 = New DevExpress.XtraPrinting.PrintableComponentLink(Me.components)
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(PieSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpGraficosCompraBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsReportes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpGraficosVentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEdit1.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(PieSeriesView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(XyDiagram2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SPProductosMasVendidosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -93,18 +105,24 @@ Partial Class FrmGraficosVentas
         '
         'AccordionControlElement2
         '
+        Me.AccordionControlElement2.Appearance.Pressed.BackColor = System.Drawing.Color.Transparent
+        Me.AccordionControlElement2.Appearance.Pressed.Options.UseBackColor = True
         Me.AccordionControlElement2.Name = "AccordionControlElement2"
         Me.AccordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement2.Text = "Anual"
         '
         'AccordionControlElement3
         '
+        Me.AccordionControlElement3.Appearance.Pressed.BackColor = System.Drawing.Color.Transparent
+        Me.AccordionControlElement3.Appearance.Pressed.Options.UseBackColor = True
         Me.AccordionControlElement3.Name = "AccordionControlElement3"
         Me.AccordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement3.Text = "Trimestral"
         '
         'AccordionControlElement4
         '
+        Me.AccordionControlElement4.Appearance.Pressed.BackColor = System.Drawing.Color.Transparent
+        Me.AccordionControlElement4.Appearance.Pressed.Options.UseBackColor = True
         Me.AccordionControlElement4.Name = "AccordionControlElement4"
         Me.AccordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement4.Text = "Bimestral"
@@ -118,18 +136,24 @@ Partial Class FrmGraficosVentas
         '
         'AccordionControlElement6
         '
+        Me.AccordionControlElement6.Appearance.Pressed.BackColor = System.Drawing.Color.Transparent
+        Me.AccordionControlElement6.Appearance.Pressed.Options.UseBackColor = True
         Me.AccordionControlElement6.Name = "AccordionControlElement6"
         Me.AccordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement6.Text = "Anual"
         '
         'AccordionControlElement7
         '
+        Me.AccordionControlElement7.Appearance.Pressed.BackColor = System.Drawing.Color.Transparent
+        Me.AccordionControlElement7.Appearance.Pressed.Options.UseBackColor = True
         Me.AccordionControlElement7.Name = "AccordionControlElement7"
         Me.AccordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement7.Text = "Trimestral"
         '
         'AccordionControlElement8
         '
+        Me.AccordionControlElement8.Appearance.Pressed.BackColor = System.Drawing.Color.Transparent
+        Me.AccordionControlElement8.Appearance.Pressed.Options.UseBackColor = True
         Me.AccordionControlElement8.Name = "AccordionControlElement8"
         Me.AccordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement8.Text = "Bimestral"
@@ -143,12 +167,17 @@ Partial Class FrmGraficosVentas
         '
         'AccordionControlElement10
         '
+        Me.AccordionControlElement10.Appearance.Pressed.BackColor = System.Drawing.Color.Transparent
+        Me.AccordionControlElement10.Appearance.Pressed.Options.UseBackColor = True
+        Me.AccordionControlElement10.HeaderTemplate.AddRange(New DevExpress.XtraBars.Navigation.HeaderElementInfo() {New DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text), New DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image), New DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl), New DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)})
         Me.AccordionControlElement10.Name = "AccordionControlElement10"
         Me.AccordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement10.Text = "Productos mas vendidos"
         '
         'AccordionControlElement11
         '
+        Me.AccordionControlElement11.Appearance.Pressed.BackColor = System.Drawing.Color.Transparent
+        Me.AccordionControlElement11.Appearance.Pressed.Options.UseBackColor = True
         Me.AccordionControlElement11.Name = "AccordionControlElement11"
         Me.AccordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement11.Text = "Productos menos vendidos"
@@ -161,15 +190,19 @@ Partial Class FrmGraficosVentas
         Me.ChartControl1.Legend.Name = "Default Legend"
         Me.ChartControl1.Location = New System.Drawing.Point(212, -1)
         Me.ChartControl1.Name = "ChartControl1"
-        Series4.ArgumentDataMember = "Anio"
-        Series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        Series4.LegendTextPattern = "{A}: Lps.{V}"
-        Series4.Name = "Total"
-        Series4.ToolTipEnabled = DevExpress.Utils.DefaultBoolean.[True]
-        Series4.ToolTipPointPattern = "{A}: Lps.{V}"
-        Series4.ValueDataMembersSerializable = "Total"
-        Series4.View = PieSeriesView3
-        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series4}
+        Me.ChartControl1.OptionsPrint.SizeMode = DevExpress.XtraCharts.Printing.PrintSizeMode.Zoom
+        Series1.ArgumentDataMember = "Anio"
+        Series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series1.LegendTextPattern = "{A}: Lps.{V}"
+        Series1.Name = "Total"
+        Series1.ToolTipEnabled = DevExpress.Utils.DefaultBoolean.[True]
+        Series1.ToolTipPointPattern = "{A}: Lps.{V}"
+        Series1.ValueDataMembersSerializable = "Total"
+        SeriesTitle1.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        SeriesTitle1.Text = "Compras"
+        PieSeriesView1.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle1})
+        Series1.View = PieSeriesView1
+        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
         Me.ChartControl1.Size = New System.Drawing.Size(669, 488)
         Me.ChartControl1.TabIndex = 2
         '
@@ -215,42 +248,58 @@ Partial Class FrmGraficosVentas
         Me.ChartControl2.DataAdapter = Me.Sp_Graficos_VentaTableAdapter
         Me.ChartControl2.DataSource = Me.SpGraficosVentaBindingSource
         Me.ChartControl2.Legend.Name = "Default Legend"
-        Me.ChartControl2.Location = New System.Drawing.Point(212, 0)
+        Me.ChartControl2.Location = New System.Drawing.Point(213, 1)
         Me.ChartControl2.Name = "ChartControl2"
-        Series5.ArgumentDataMember = "Anio1"
-        Series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        Series5.LegendTextPattern = "{A}: Lps.{V}"
-        Series5.Name = "Total"
-        Series5.ToolTipEnabled = DevExpress.Utils.DefaultBoolean.[True]
-        Series5.ToolTipPointPattern = "{A}: Lps.{V}"
-        Series5.ValueDataMembersSerializable = "Total"
-        Series5.View = PieSeriesView4
-        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series5}
+        Me.ChartControl2.OptionsPrint.SizeMode = DevExpress.XtraCharts.Printing.PrintSizeMode.Zoom
+        Series2.ArgumentDataMember = "Anio1"
+        Series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series2.LegendTextPattern = "{A}: Lps.{V}"
+        Series2.Name = "Total"
+        Series2.ToolTipEnabled = DevExpress.Utils.DefaultBoolean.[True]
+        Series2.ToolTipPointPattern = "{A}: Lps.{V}"
+        Series2.ValueDataMembersSerializable = "Total"
+        Series2.View = PieSeriesView2
+        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2}
         Me.ChartControl2.Size = New System.Drawing.Size(669, 488)
         Me.ChartControl2.TabIndex = 4
+        ChartTitle1.Text = "Ventas"
+        ChartTitle1.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        Me.ChartControl2.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle1})
         '
         'ChartControl3
         '
         Me.ChartControl3.BackColor = System.Drawing.Color.AliceBlue
         Me.ChartControl3.DataAdapter = Me.Sp_Graficos_VentaTableAdapter
         Me.ChartControl3.DataSource = Me.SPProductosMasVendidosBindingSource
-        XyDiagram2.AxisX.VisibleInPanesSerializable = "-1"
-        XyDiagram2.AxisY.Interlaced = True
-        XyDiagram2.AxisY.MinorCount = 4
-        XyDiagram2.AxisY.VisibleInPanesSerializable = "-1"
-        Me.ChartControl3.Diagram = XyDiagram2
+        XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
+        XyDiagram1.AxisY.Interlaced = True
+        XyDiagram1.AxisY.MinorCount = 4
+        XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
+        Me.ChartControl3.Diagram = XyDiagram1
         Me.ChartControl3.Legend.Name = "Default Legend"
-        Me.ChartControl3.Location = New System.Drawing.Point(212, 0)
+        Me.ChartControl3.Location = New System.Drawing.Point(213, 1)
         Me.ChartControl3.Name = "ChartControl3"
-        Series6.ArgumentDataMember = "Descripcion"
-        Series6.ColorDataMember = "Cantidad Vendido"
-        Series6.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        Series6.Name = "Cantidad"
-        Series6.ToolTipEnabled = DevExpress.Utils.DefaultBoolean.[True]
-        Series6.ValueDataMembersSerializable = "Cantidad Vendido"
-        Me.ChartControl3.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series6}
+        Me.ChartControl3.OptionsPrint.SizeMode = DevExpress.XtraCharts.Printing.PrintSizeMode.Zoom
+        Series3.ArgumentDataMember = "Descripcion"
+        Series3.ColorDataMember = "Cantidad Vendido"
+        SideBySideBarSeriesLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(189, Byte), Integer))
+        SideBySideBarSeriesLabel1.Border.Color = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(189, Byte), Integer))
+        SideBySideBarSeriesLabel1.Indent = 12
+        SideBySideBarSeriesLabel1.TextColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Series3.Label = SideBySideBarSeriesLabel1
+        Series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series3.Name = "Cantidad"
+        Series3.ToolTipEnabled = DevExpress.Utils.DefaultBoolean.[True]
+        Series3.ValueDataMembersSerializable = "Cantidad Vendido"
+        SideBySideBarSeriesView1.Color = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(189, Byte), Integer))
+        SideBySideBarSeriesView1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Solid
+        Series3.View = SideBySideBarSeriesView1
+        Me.ChartControl3.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series3}
         Me.ChartControl3.Size = New System.Drawing.Size(669, 488)
         Me.ChartControl3.TabIndex = 5
+        ChartTitle2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartTitle2.Text = "Venta de Productos"
+        Me.ChartControl3.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle2})
         '
         'SPProductosMasVendidosBindingSource
         '
@@ -272,28 +321,63 @@ Partial Class FrmGraficosVentas
         '
         'PrintingSystem1
         '
-        Me.PrintingSystem1.Links.AddRange(New Object() {Me.PrintableComponentLink1, Me.PrintableComponentLink2, Me.PrintableComponentLink3})
+        Me.PrintingSystem1.Links.AddRange(New Object() {Me.PrintableComponentLink1, Me.PrintableComponentLink2, Me.PrintableComponentLink3, Me.PrintableComponentLink4, Me.PrintableComponentLink5, Me.PrintableComponentLink6, Me.PrintableComponentLink7, Me.PrintableComponentLink8})
         '
         'PrintableComponentLink1
         '
         Me.PrintableComponentLink1.Component = Me.ChartControl1
-        Me.PrintableComponentLink1.Landscape = True
+        Me.PrintableComponentLink1.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
         Me.PrintableComponentLink1.PrintingSystemBase = Me.PrintingSystem1
         Me.PrintableComponentLink1.RtfReportHeader = resources.GetString("PrintableComponentLink1.RtfReportHeader")
         '
         'PrintableComponentLink2
         '
         Me.PrintableComponentLink2.Component = Me.ChartControl2
-        Me.PrintableComponentLink2.Landscape = True
+        Me.PrintableComponentLink2.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
         Me.PrintableComponentLink2.PrintingSystemBase = Me.PrintingSystem1
         Me.PrintableComponentLink2.RtfReportHeader = resources.GetString("PrintableComponentLink2.RtfReportHeader")
         '
         'PrintableComponentLink3
         '
         Me.PrintableComponentLink3.Component = Me.ChartControl3
-        Me.PrintableComponentLink3.Landscape = True
+        Me.PrintableComponentLink3.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
         Me.PrintableComponentLink3.PrintingSystemBase = Me.PrintingSystem1
         Me.PrintableComponentLink3.RtfReportHeader = resources.GetString("PrintableComponentLink3.RtfReportHeader")
+        '
+        'PrintableComponentLink4
+        '
+        Me.PrintableComponentLink4.Component = Me.ChartControl1
+        Me.PrintableComponentLink4.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink4.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink4.RtfReportHeader = resources.GetString("PrintableComponentLink4.RtfReportHeader")
+        '
+        'PrintableComponentLink5
+        '
+        Me.PrintableComponentLink5.Component = Me.ChartControl1
+        Me.PrintableComponentLink5.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink5.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink5.RtfReportHeader = resources.GetString("PrintableComponentLink5.RtfReportHeader")
+        '
+        'PrintableComponentLink6
+        '
+        Me.PrintableComponentLink6.Component = Me.ChartControl2
+        Me.PrintableComponentLink6.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink6.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink6.RtfReportHeader = resources.GetString("PrintableComponentLink6.RtfReportHeader")
+        '
+        'PrintableComponentLink7
+        '
+        Me.PrintableComponentLink7.Component = Me.ChartControl2
+        Me.PrintableComponentLink7.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink7.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink7.RtfReportHeader = resources.GetString("PrintableComponentLink7.RtfReportHeader")
+        '
+        'PrintableComponentLink8
+        '
+        Me.PrintableComponentLink8.Component = Me.ChartControl3
+        Me.PrintableComponentLink8.Margins = New System.Drawing.Printing.Margins(30, 30, 30, 30)
+        Me.PrintableComponentLink8.PrintingSystemBase = Me.PrintingSystem1
+        Me.PrintableComponentLink8.RtfReportHeader = resources.GetString("PrintableComponentLink8.RtfReportHeader")
         '
         'FrmGraficosVentas
         '
@@ -310,19 +394,21 @@ Partial Class FrmGraficosVentas
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Graficos Ventas"
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(PieSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpGraficosCompraBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsReportes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpGraficosVentaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEdit1.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(PieSeriesView4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(XyDiagram2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesLabel1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SPProductosMasVendidosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintingSystem1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -358,4 +444,9 @@ Partial Class FrmGraficosVentas
     Friend WithEvents PrintableComponentLink1 As DevExpress.XtraPrinting.PrintableComponentLink
     Friend WithEvents PrintableComponentLink2 As DevExpress.XtraPrinting.PrintableComponentLink
     Friend WithEvents PrintableComponentLink3 As DevExpress.XtraPrinting.PrintableComponentLink
+    Friend WithEvents PrintableComponentLink4 As DevExpress.XtraPrinting.PrintableComponentLink
+    Friend WithEvents PrintableComponentLink5 As DevExpress.XtraPrinting.PrintableComponentLink
+    Friend WithEvents PrintableComponentLink6 As DevExpress.XtraPrinting.PrintableComponentLink
+    Friend WithEvents PrintableComponentLink7 As DevExpress.XtraPrinting.PrintableComponentLink
+    Friend WithEvents PrintableComponentLink8 As DevExpress.XtraPrinting.PrintableComponentLink
 End Class

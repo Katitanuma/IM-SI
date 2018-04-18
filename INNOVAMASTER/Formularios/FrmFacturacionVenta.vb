@@ -533,30 +533,28 @@ Public Class FrmFacturacionVenta
         If x = 1 Then
             If DgvDetalle.RowCount = 1 Then
                 XtraMessageBox.Show("Ingresar al menos un producto para facturar la venta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
             Else
-
 
                 Dim re As Object = InputBox("Ingrese el Monto de Pago:", "INNOVAMASTER", "0")
                 Dim monto As Double
                 If re = vbNullString Then
-
                     XtraMessageBox.Show("Campo no Valido", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Exit Sub
                 ElseIf IsNumeric(re) Then
                     monto = CDbl(re)
                 Else
-
                     XtraMessageBox.Show("Campo no Valido", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Exit Sub
                 End If
-                If monto < CDbl(TxtTotal.Text) Then
 
+                If monto < CDbl(TxtTotal.Text) Then
                     XtraMessageBox.Show("El Monto de Pago es muy bajo para Facturar", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Exit Sub
                 Else
                     LblCambio.Text = monto - CDbl(TxtTotal.Text)
+
                 End If
+
                 XtraMessageBox.Show("Cambio: L." + LblCambio.Text)
                 Conec.Conectarse()
                 Dim estado As Boolean = True
@@ -629,19 +627,14 @@ Public Class FrmFacturacionVenta
                         Catch ex As Exception
 
                         End Try
-
                     End If
-
-
-
                 Else
-
                     DgvDetalle.AllowUserToAddRows = True
                     XtraMessageBox.Show("Tiene que Ingresar algunos Códigos de Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
                 End If
             End If
             Exit Sub
+            Me.Close()
         End If
         If GuardarVenta() = True Then
             x = 1
@@ -672,6 +665,7 @@ Public Class FrmFacturacionVenta
                     Else
                         LblCambio.Text = monto - CDbl(TxtTotal.Text)
                     End If
+                    XtraMessageBox.Show("Cambio: L." + LblCambio.Text)
                     Conec.Conectarse()
                     Dim estado As Boolean = True
                     DgvDetalle.AllowUserToAddRows = False
@@ -719,7 +713,7 @@ Public Class FrmFacturacionVenta
                         Label7.Text = "1"
 
                         XtraMessageBox.Show("Productos facturados con éxito, Vamos a Imprimir la Factura", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                        Dim r As DialogResult = XtraMessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                         If r = DialogResult.Yes Then
                             FrmFactura.var = 1
                             EditarCambio(CDbl(LblCambio.Text))
@@ -743,7 +737,7 @@ Public Class FrmFacturacionVenta
                             Catch ex As Exception
 
                             End Try
-
+                            Me.Close()
                         End If
                     Else
 
@@ -757,30 +751,9 @@ Public Class FrmFacturacionVenta
     End Sub
 
     Private Sub FrmDetalleVenta_Load(sender As Object, e As EventArgs) Handles Me.Load
-        If GenerarCodigoVenta() = True Then
-            Me.Close()
-            Exit Sub
-        End If
-        DgvDetalle.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken
-        TxtDescuentoExtra.Value = 0
-
-        TxtFechaVenta.Text = DateTime.Now.ToString("dd/MM/yyyy")
-        LlenarIdCliente()
-
-        CboCliente.EditValue = Nothing
-        CboFV.Text = Nothing
-        CboTV.Text = Nothing
-        TxtDescuentoExtra.Text = Nothing
-
-        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
-        HelpProvider1.HelpNamespace = NombreArchivo
-        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
-        HelpProvider1.SetHelpKeyword(Me, "Factura")
-        CboFV.Text = "Unitario"
-        CboTV.Text = "Contado"
-        TxtFechaVencimiento.EditValue = DateTime.Now.AddDays(15)
-
+        Cargar()
     End Sub
+
     Private Sub LlenarIdCliente()
         Dim _DT As New DataTable
         Dim da As New SqlDataAdapter
@@ -1264,5 +1237,36 @@ Public Class FrmFacturacionVenta
 
     Private Sub CboTV_Click(sender As Object, e As EventArgs) Handles CboTV.Click
 
+    End Sub
+    Private Sub Cargar()
+        If GenerarCodigoVenta() = True Then
+            Me.Close()
+            Exit Sub
+        End If
+        DgvDetalle.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken
+        TxtDescuentoExtra.Value = 0
+
+        TxtFechaVenta.Text = DateTime.Now.ToString("dd/MM/yyyy")
+        LlenarIdCliente()
+
+        CboCliente.EditValue = Nothing
+        CboFV.Text = Nothing
+        CboTV.Text = Nothing
+        TxtDescuentoExtra.Text = Nothing
+
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Factura")
+        CboFV.Text = "Unitario"
+        CboTV.Text = "Contado"
+        TxtFechaVencimiento.EditValue = DateTime.Now.AddDays(15)
+
+    End Sub
+    Private Sub Filas()
+        DgvDetalle.Rows.Clear()
+        DgvDetalle.Rows.Add()
+        DgvDetalle.Columns("Eliminar").SortMode = DataGridViewColumnSortMode.NotSortable
+        LlenarTextBox()
     End Sub
 End Class
