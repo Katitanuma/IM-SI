@@ -51,7 +51,7 @@ Public Class FrmUsuario
         RdbActivo.Checked = True
     End Sub
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
-        Dim r As DialogResult = MessageBox.Show("¿Desea Cancelar el Proceso?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim r As DialogResult = XtraMessageBox.Show("¿Desea Cancelar el Proceso?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If r = DialogResult.Yes Then
             GCPrincipal.Enabled = True
             GbUsuario.Enabled = False
@@ -78,15 +78,16 @@ Public Class FrmUsuario
             GbUsuario.Enabled = True
             BtnCancelar.Visible = True
             BtnInsertar.Visible = False
-            BtnEditar.Visible = True
+            BtnEditar.Visible = False
             BtnNuevo.Visible = False
             BtnEditar.Visible = False
             GCPrincipal.Enabled = False
             TxtContra.EditValue = Nothing
             TxtContra2.EditValue = Nothing
             ChkVer.Checked = False
+            BtnActualizar.Visible = True
         Else
-            MessageBox.Show("Seleccione el Usuario a Editar", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Seleccione el Usuario a Editar", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
 
 
@@ -192,7 +193,7 @@ Public Class FrmUsuario
 
 
 
-                        MessageBox.Show("Usuario Insertado Con Exito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        XtraMessageBox.Show("Usuario Insertado Con Exito", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         GbUsuario.Enabled = False
                         TxtIdUsuario.EditValue = Nothing
                         TxtUsuario.EditValue = Nothing
@@ -298,7 +299,7 @@ Public Class FrmUsuario
                     CboTipoA.Text = "Administrador"
                     BtnCancelar.Visible = False
                     BtnInsertar.Visible = False
-                    BtnEditar.Visible = False
+                    BtnActualizar.Visible = False
                     BtnEditar.Visible = True
                     BtnNuevo.Visible = True
                     GCPrincipal.Enabled = True
@@ -317,7 +318,7 @@ Public Class FrmUsuario
     End Sub
     Private Sub CboEmpleado_SelectedIndexChanged(sender As Object, e As EventArgs)
         If TxtContra.Text <> TxtContra2.Text Then
-            MessageBox.Show("Las Contraseñas no son Iguales", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            XtraMessageBox.Show("Las Contraseñas no son Iguales", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 
